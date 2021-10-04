@@ -1,0 +1,16 @@
+{
+  "peaple": [
+    {
+      "name": "André de Castro Possas",
+      "city": "Belo Horizonte",
+      "birthday": "19/01/1991",
+      "email": "andrepossas@gmail.com"
+    },
+    {
+      "name": "Lucas Minatelli",
+      "city": "Belo Horizonte",
+      "birthday": "05/07/1995",
+      "email": "lucasminatelli@gmail.com"
+    }
+  ]
+}
