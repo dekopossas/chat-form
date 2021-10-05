@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Form() {
   return (
@@ -15,7 +15,7 @@ function Form() {
       <input className="form_fild" name="email" placeholder="Escreva seu email" type="text" />
       <p>Parabéns, acabou de finalizar o teste. Faça uma avaliação desse processo.</p>
     </form>
-  )
+  );
 }
 
-export default Form
+export default Form;
