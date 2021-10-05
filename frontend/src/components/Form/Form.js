@@ -2,9 +2,9 @@ import React from 'react'
 
 function Form() {
   return (
-    <div>
-      Formulario aqui
-    </div>
+    <form className="form">
+      <input className="form_fild" name="name" placeholder="Escreva seu nome" type="text" />
+    </form>
   )
 }
 
