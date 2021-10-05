@@ -14,6 +14,9 @@ const Form = ({ initialValues, handleSubmit }) => (
           placeholder="Escreva seu nome"
           type="text"
         />
+        <button className="next_btn" type="button">
+          Next
+        </button>
         <p>Que satisfação "nome da pessoa". Agora que sei seu nome, onde você mora?</p>
         <Field
           className="form_fild"
@@ -21,7 +24,9 @@ const Form = ({ initialValues, handleSubmit }) => (
           placeholder="Escolha seu estado"
           type="text"
         />
-
+        <button className="next_btn" type="button">
+          Next
+        </button>
         <p>Qual o cidade?</p>
         <Field
           className="form_fild"
@@ -29,6 +34,9 @@ const Form = ({ initialValues, handleSubmit }) => (
           placeholder="Escolha sua cidade"
           type="text"
         />
+        <button className="next_btn" type="button">
+          Next
+        </button>
         <p>Agora que sabem de onde esta falando, qual sua data de nascimento?</p>
         <Field
           className="form_fild"
@@ -36,6 +44,9 @@ const Form = ({ initialValues, handleSubmit }) => (
           placeholder="Escolha uma data"
           type="text"
         />
+        <button className="next_btn" type="button">
+          Next
+        </button>
         <p>Por ultimo, o seu email:</p>
         <Field
           className="form_fild"
