@@ -5,8 +5,8 @@ import { Formik } from 'formik';
 
 const Form = ({ initialValues, onSubmit }) => (
   <Formik initialValues={initialValues} onSubmit={onSubmit}>
-    {() => (
-      <form className="form">
+    {({ handleBlur, handleSubmit, handleChange }) => (
+      <form className="form" onSubmit={handleSubmit}>
         <p>Olá, eu sou Chatnilson, Tudo bem? Para começarmos, preciso saber seu nome.</p>
         <input className="form_fild" name="name" placeholder="Escreva seu nome" type="text" />
         <p>
@@ -19,6 +19,9 @@ const Form = ({ initialValues, onSubmit }) => (
         <input className="form_fild" name="birthday" placeholder="Escolha uma data" type="text" />
         <p>Por ultimo, o seu email:</p>
         <input className="form_fild" name="email" placeholder="Escreva seu email" type="text" />
+        <button className="form_btn" type="submit">
+          Enviar
+        </button>
         <p>Parabéns, acabou de finalizar o teste. Faça uma avaliação desse processo.</p>
       </form>
     )}
