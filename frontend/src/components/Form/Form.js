@@ -1,67 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Formik } from 'formik';
+import { Formik, Form as FormikForm, Field } from 'formik';
 
 const Form = ({ initialValues, handleSubmit }) => (
   <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-    {({ handleBlur, handleSubmit, handleChange, values }) => (
-      <form className="form" onSubmit={handleSubmit}>
+    {() => (
+      <FormikForm className="form" >
         <p>Olá, eu sou Chatnilson, Tudo bem? Para começarmos, preciso saber seu nome.</p>
-        <input
+        <Field
           className="form_fild"
           name="name"
           placeholder="Escreva seu nome"
           type="text"
-          value={values.name}
-          onChange={handleChange}
         />
         <p>Que satisfação "nome da pessoa". Agora que sei seu nome, onde você mora?</p>
-        <input
+        <Field
           className="form_fild"
           name="state"
           placeholder="Escolha seu estado"
           type="text"
-          value={values.state}
-          onChange={handleChange}
-          onBlur={handleBlur}
         />
 
         <p>Qual o cidade?</p>
-        <input
+        <Field
           className="form_fild"
           name="city"
           placeholder="Escolha sua cidade"
           type="text"
-          value={values.city}
-          onChange={handleChange}
-          onBlur={handleBlur}
         />
         <p>Agora que sabem de onde esta falando, qual sua data de nascimento?</p>
-        <input
+        <Field
           className="form_fild"
           name="birthday"
           placeholder="Escolha uma data"
           type="text"
-          value={values.birthday}
-          onChange={handleChange}
-          onBlur={handleBlur}
         />
         <p>Por ultimo, o seu email:</p>
-        <input
+        <Field
           className="form_fild"
           name="email"
           placeholder="Escreva seu email"
           type="text"
-          value={values.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
         />
         <button className="form_btn" type="submit">
           Enviar
         </button>
         <p>Parabéns, acabou de finalizar o teste. Faça uma avaliação desse processo.</p>
-      </form>
+      </FormikForm>
     )}
   </Formik>
 );
