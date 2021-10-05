@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import * as yup from 'yup';
+
 import { Formik, Form as FormikForm, Field } from 'formik';
 
 const Form = ({ initialValues, handleSubmit }) => (
