@@ -18,34 +18,34 @@ const Form = ({ initialValues, handleSubmit }) => (
     <FormikForm className="form">
       <p>Olá, eu sou Chatnilson, Tudo bem? Para começarmos, preciso saber seu nome.</p>
       <Field className="form_fild" name="name" placeholder="Escreva seu nome" type="text" />
-      <ErrorMessage className="form_error" component="span" name="name" />
       <button className="next_btn" type="button">
         Next
-      </button>
+      </button><br />
+      <ErrorMessage className="form_error" component="span" name="name" />
       <p>Que satisfação "nome da pessoa". Agora que sei seu nome, onde você mora?</p>
       <Field className="form_fild" name="state" placeholder="Escolha seu estado" type="text" />
-      <ErrorMessage className="form_error" component="span" name="state" />
       <button className="next_btn" type="button">
         Next
-      </button>
+      </button><br />
+      <ErrorMessage className="form_error" component="span" name="state" />
       <p>Qual o cidade?</p>
       <Field className="form_fild" name="city" placeholder="Escolha sua cidade" type="text" />
-      <ErrorMessage className="form_error" component="span" name="city" />
       <button className="next_btn" type="button">
         Next
-      </button>
+      </button><br />
+      <ErrorMessage className="form_error" component="span" name="city" />
       <p>Agora que sabem de onde esta falando, qual sua data de nascimento?</p>
       <Field className="form_fild" name="birthday" placeholder="Escolha uma data" type="text" />
-      <ErrorMessage className="form_error" component="span" name="birthday" />
       <button className="next_btn" type="button">
         Next
-      </button>
+      </button><br />
+      <ErrorMessage className="form_error" component="span" name="birthday" />
       <p>Por ultimo, o seu email:</p>
       <Field className="form_fild" name="email" placeholder="Escreva seu email" type="text" />
-      <ErrorMessage className="form_error" component="span" name="email" />
       <button className="form_btn" type="submit">
         Enviar
-      </button>
+      </button><br />
+      <ErrorMessage className="form_error" component="span" name="email" />
       <p>Parabéns, acabou de finalizar o teste. Faça uma avaliação desse processo.</p>
     </FormikForm>
   </Formik>
