@@ -6,7 +6,8 @@ import Form from '../../components/Form';
 const initialValues = {};
 const handleSubmit = async (values) => {
   const response = await api.post('/suport', values);
-  if (response.status === 200) {
+  console.log(response);
+  if (response.status === 201) {
      return alert('Contato salvo com sucesso.');
   } else {
      return alert('Algo deu errado.');
