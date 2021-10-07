@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Suport from './pages/Suport';
@@ -9,7 +9,7 @@ function Routes() {
       <Route path="/" exact component={Home} />
       <Route path="/Suport" exact component={Suport} />
     </Switch>
-  )
+  );
 }
 
-export default Routes
+export default Routes;
