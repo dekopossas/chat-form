@@ -6,8 +6,8 @@ import Suport from './pages/Suport';
 function Routes() {
   return (
     <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/Suport" component={Suport} />
+      <Route path="/" exact component={Home} />
+      <Route path="/Suport" exact component={Suport} />
     </Switch>
   )
 }
