@@ -3,9 +3,8 @@ import api from '../../services/api';
 
 import Form from '../../components/Form';
 
-const handleSubmit = (values) => alert(JSON.stringify(values));
 const initialValues = {};
-
+const handleSubmit = async (values) => await api.post('/suport', JSON.stringify(values));
 
 function Suport() {
   return (
