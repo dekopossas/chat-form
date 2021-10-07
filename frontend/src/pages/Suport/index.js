@@ -7,9 +7,9 @@ const initialValues = {};
 const handleSubmit = async (values) => {
   const response = await api.post('/suport', JSON.stringify(values));
   if (response.status === 200) {
-    alert('Contato salvo com sucesso.');
+     return alert('Contato salvo com sucesso.');
   } else {
-    alert('Algo deu errado.');
+     return alert('Algo deu errado.');
   }
 };
 
