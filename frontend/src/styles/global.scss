@@ -8,3 +8,9 @@ body {
   background-color: #d2dbdc;
   font-family: 'Segoe UI', Helvetica Neue, Helvetica, Lucida Grande, Arial;
 }
+
+.app-window {
+  display: flex;
+  height: 100vh;
+  background-color: #ededed;
+}
