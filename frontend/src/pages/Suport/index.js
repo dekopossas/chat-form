@@ -7,6 +7,8 @@ import api from '../../services/api';
 
 // Components
 import Form from '../../components/Form';
+import SideBar from '../../components/SideBar';
+import MainContainer from '../../components/MainContainer';
 
 function Suport() {
   // ----------------------------------------------------------------
@@ -34,8 +36,8 @@ function Suport() {
 
   return (
     <div className="app-window">
-      <h1>Suport Page</h1>
-      <Form handleSubmit={handleSubmit} initialValues={initialValues} />
+      <SideBar />
+      <MainContainer />
     </div>
   );
 }
