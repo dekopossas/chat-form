@@ -33,7 +33,7 @@ function Suport() {
   };
 
   return (
-    <div>
+    <div className="app-window">
       <h1>Suport Page</h1>
       <Form handleSubmit={handleSubmit} initialValues={initialValues} />
     </div>
