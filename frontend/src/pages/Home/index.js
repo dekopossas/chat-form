@@ -7,7 +7,7 @@ function Home() {
   const goSuport = () => history.push('/suport');
 
   return (
-    <div>
+    <div className="app-window">
       <h1>Bem Vindo ao Atendimento Dinamico!</h1>
 
       <button onClick={goSuport}>Suporte</button>
