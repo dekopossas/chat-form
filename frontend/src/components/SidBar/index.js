@@ -1,11 +1,11 @@
 import React from 'react'
 
-function SidBar() {
+function SideBar() {
   return (
-    <div>
+    <div className={styles.sidebar}>
       ...
     </div>
   )
 }
 
-export default SidBar
+export default SideBar

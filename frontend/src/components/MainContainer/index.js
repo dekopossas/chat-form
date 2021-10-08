@@ -2,7 +2,7 @@ import React from 'react'
 
 function MainContainer() {
   return (
-    <div>
+    <div className={style.contentarea}>
       ...
     </div>
   )
