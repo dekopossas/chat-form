@@ -16,3 +16,13 @@
 .header_buttons {
   display: flex;
 }
+
+.header_icons {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
