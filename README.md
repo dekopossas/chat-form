@@ -9,11 +9,23 @@ Tabela de conteúdos
 <!--ts-->
    * [Features](#Features)
    * [ScreenShots](#ScreenShots)
-   * [Instalação](#Instalação)	
-   * [Tecnologias](#tecnologias)
-   * [Autor](#Autor)
+   * [installation](#Instalação)	
+   * [Tecnologies](#tecnologias)
+   * [author](#Autor)
 <!--te-->
 
 <h2 align="center"> 
-	🚧  React Select 🚀 Em construção...  🚧
+	🚧  React Select 🚀 Under construction...  🚧
 </h2>
+
+## Features
+### Desirable.
+
+- [x] Formik
+- [x] Yup
+- [ ] Testes Unitários
+- [ ] Dynamic Chat Bot
+- [ ] Registered Service
+- [ ] REDUX
+- [x] Readme
+- [x] Routes
