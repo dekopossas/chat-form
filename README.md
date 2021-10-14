@@ -9,9 +9,9 @@ Tabela de conteúdos
 <!--ts-->
    * [Features](#Features)
    * [ScreenShots](#ScreenShots)
-   * [installation](#Instalação)	
+   * [Installation](#Instalação)	
    * [Tecnologies](#tecnologias)
-   * [author](#Autor)
+   * [Author](#Autor)
 <!--te-->
 
 <h2 align="center"> 
