@@ -23,9 +23,16 @@ Tabela de conteúdos
 
 - [x] Formik
 - [x] Yup
-- [ ] Testes Unitários
 - [ ] Dynamic Chat Bot
 - [ ] Registered Service
 - [ ] REDUX
-- [x] Readme
 - [x] Routes
+
+### Differentials.
+
+- [ ] Birthday and email validate system style.
+- [ ] New state for incorrect data
+- [ ] Auto complete state list
+- [x] Readme
+- [ ] Unitary tests
+
