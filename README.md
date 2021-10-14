@@ -36,3 +36,10 @@ Tabela de conteúdos
 - [x] Readme
 - [ ] Unitary tests
 
+### Not rated.
+
+- [ ] Header SideBar
+- [ ] Header
+- [ ] Footer
+- [ ] Login system
+
