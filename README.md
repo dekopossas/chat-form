@@ -41,11 +41,57 @@ Tabela de conteúdos
 - [ ] Header SideBar
 - [ ] Header
 - [ ] Footer
-- [ ] Login system
+- [ ] Face Book Login system
 
 # ScreenShots
 
 <h4 align="left">
-  Section of screens
+  Screen`s Sections
 </h4>
 
+## Installation
+
+Before starting, you will need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+It's nice to have an editor to work with code like [VSCode](https://code.visualstudio.com/)
+
+### Clone the project:
+Open the command terminal and type:
+```bash
+git clone git@github.com:dekopossas/staff-management.git
+```
+or access this [link](git@github.com:dekopossas/staff-management.git) and download the zip.
+
+### 🎲 Running the Back End (servidor)
+The focus of the project was to demonstrate my skills with the frontend, so I used the backend that I consider as simple as possible and easy to do, Json Server.
+In the project folder, open your terminal and follow the step by step:
+
+```bash
+# Access the backend project directory:
+$ cd backend
+
+# Install dependencies:
+$ yarn
+
+# Start the Backend with the command:
+$ yarn start
+```
+### The server will start on port:3001 -
+
+### 🎲 Running the Front End (site)
+In a new terminal in the project's local folder follow this step by step:
+
+```bash
+# Access the frontend project directory:
+$ cd frontend
+
+# Install dependencies:
+$ yarn
+
+# Start the Backend with the command:
+$ yarn start
+```
+Wait until the browser opens on port 3000
+
+If you are using the npm package, the commands are different,
+I recommend following the [documentation](https://www.npmjs.com/)
