@@ -19,7 +19,7 @@ Tabela de conteúdos
 </h2>
 
 ## Features
-### Desirable.
+### Mandatory.
 
 - [x] Formik
 - [x] Yup
