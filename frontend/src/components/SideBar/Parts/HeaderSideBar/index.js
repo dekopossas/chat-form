@@ -20,15 +20,12 @@ function HeaderSideBar() {
       <div className={style.header_buttons}>
         <div className={style.header_icons}>
           {/* <DonutLargeIcon style={{color: '#919191'}} /> */}
-          <div></div>
         </div>
         <div className={style.header_icons}>
           {/* <ChatIcon style={{color: '#919191'}} /> */}
-          <div></div>
         </div>
         <div className={style.header_icons}>
           {/* <MoreVertIcon style={{color: '#919191'}} /> */}
-          <div></div>
         </div>
       </div>
     </div>
