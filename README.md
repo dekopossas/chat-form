@@ -98,3 +98,23 @@ Wait until the browser opens on port 3000
 
 If you are using the npm package, the commands are different,
 I recommend following the [documentation](https://www.npmjs.com/)
+
+### 🛠 Technologies
+
+The following tools were used in the construction of the project:
+
+- [Json Server](https://github.com/typicode/json-server) Backend
+- [React](https://pt-br.reactjs.org/) Framework
+- [axios](https://github.com/axios/axios) Promise based HTTP client
+- [date-fns](https://date-fns.org/) Time library
+- [react hook form](https://react-hook-form.com/) forms library
+- [SASS](https://sass-lang.com/) CSS
+
+### Autor
+---
+
+Feito com ❤️ por André Possas 👋🏽 Entre em contato!
+
+![Badge](https://img.shields.io/badge/André-Possas-%237159c1?style=for-the-badge)
+[![Gmail Badge](https://img.shields.io/badge/-andrepossaster@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:andrepossaster@gmail.com)](andrepossaster@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrepossas/)](https://www.linkedin.com/in/andrepossas/)
