@@ -62,7 +62,7 @@ git clone git@github.com:dekopossas/staff-management.git
 ```
 or access this [link](git@github.com:dekopossas/staff-management.git) and download the zip.
 
-### 🎲 Running the Back End (servidor)
+### 🎲 Running the Back End (server)
 The focus of the project was to demonstrate my skills with the frontend, so I used the backend that I consider as simple as possible and easy to do, Json Server.
 In the project folder, open your terminal and follow the step by step:
 
