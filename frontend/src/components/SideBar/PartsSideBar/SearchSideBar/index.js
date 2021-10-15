@@ -8,7 +8,7 @@ function SearchSideBar() {
   return (
     <div className={style.search}>
       <div className={style.search_input}>
-        <div className={style.header_icons}>
+        <div className={style.search_icons}>
           {/* <SearchIcon fontSize="small" style={{color: '#919191'}} /> */}
           <input type="search" placeholder="Procurar ou começar uma nova conversa" />
         </div>
