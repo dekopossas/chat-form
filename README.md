@@ -23,9 +23,12 @@ Tabela de conteúdos
 
 - [x] Formik
 - [x] Yup
+- [x] React
+- [x] Axios
 - [ ] Dynamic Chat Bot
 - [ ] Registered Service
 - [ ] REDUX
+- [x] Own components
 - [x] Routes
 
 ### Differentials.
