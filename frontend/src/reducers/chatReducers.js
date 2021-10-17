@@ -16,3 +16,5 @@ const chatReducers = (state = INITIAL_STATE, action) => {
     };
   }
 };
+
+export default chatReducers;
