@@ -6,11 +6,6 @@
   align-items: center;
   height: 100%;
   border-bottom: 6px solid #4adf83;
-
-  img {
-    width: 250px;
-    height: auto;
-  }
   
   h1 {
     font-size: 32 px;
@@ -27,4 +22,9 @@
     line-height: 20px;
     text-align: center;
   }
+}
+
+.introImag {
+  width: 250px;
+  height: auto;
 }

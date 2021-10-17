@@ -4,10 +4,7 @@ import style from './style.module.scss';
 function ChatIntro() {
   return (
     <div className={style.chatIntro}>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_64w8pahS8vBYz59jnGcZMBBX-e3ByHbNBQ&usqp=CAU"
-        alt="intro chat contente"
-      />
+      <img className={style.introImg} src="/image/whatsapp.png" alt="intro chat contente" />
       <h1>Mantenha seu Celular Conectado</h1>
       <h2>
         O WhatsApp conecta ao seu celular para sincronizar suas mensagens. Para reduzir o uso de
