@@ -3,7 +3,7 @@ import ChatListItem from './ChatListComponents/ChatListItem';
 import style from './style.module.scss';
 
 function ChatListSideBar() {
-  const [chatList, setChatList] = useState([{}, {}, {}, {}]);
+  const [chatList, setChatList] = useState([{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}]);
 
   return (
     <div className={style.chatList}>
