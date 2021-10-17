@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ChatListSideBar from './PartsSideBar/ChatListSideBar';
 import HeaderSideBar from './PartsSideBar/HeaderSideBar';
 import SearchSideBar from './PartsSideBar/SearchSideBar';
@@ -11,7 +11,7 @@ function SideBar() {
       <SearchSideBar />
       <ChatListSideBar />
     </div>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;
