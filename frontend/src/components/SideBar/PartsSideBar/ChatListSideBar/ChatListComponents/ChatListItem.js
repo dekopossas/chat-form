@@ -10,12 +10,14 @@ function ChatListItem() {
         alt="screen user chat"
       />
       <div className={style.chatList_lines}>
-        <div className={style.chatList_nickname}>André Possas</div>
-        <div className={style.chatList_date}>19:00</div>
-      </div>
-      <div className={style.chatList_lines}>
-        <div className={style.chatList_lastMsg}>
-          <p>Olá, Tudo bem?</p>
+        <div className={style.chatList_line}>
+          <div className={style.chatList_nickname}>André Possas</div>
+          <div className={style.chatList_date}>19:00</div>
+        </div>
+        <div className={style.chatList_line}>
+          <div className={style.chatList_lastMsg}>
+            <p>Olá, Tudo bem?</p>
+          </div>
         </div>
       </div>
     </div>
