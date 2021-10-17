@@ -1,5 +1,5 @@
 // API
-import api from '../services/api';
+import api from '../../services/api';
 
 const allReports = api.get('/suport');
 
