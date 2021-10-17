@@ -3,6 +3,10 @@
   cursor: pointer;
   align-items: center;
   height: 70px;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
 }
 
 .chatList_avatar {
