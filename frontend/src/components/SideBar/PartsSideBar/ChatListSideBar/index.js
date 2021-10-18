@@ -3,8 +3,9 @@ import ChatListItem from './ChatListComponents/ChatListItem';
 import style from './style.module.scss';
 import { connect } from 'react-redux';
 import api from '../../../../services/api';
+import * as ChatAction from '../../../../redux/actions/chatAction'
 
-function ChatListSideBar() {
+function ChatListSideBar(selectChat) {
   const [data, seteData] = useState();
 
   const loadData = async () => {
@@ -18,9 +19,19 @@ function ChatListSideBar() {
 
   return (
     <div className={style.chatList}>
-      {data ? data.map((contact, key) => <ChatListItem key={key} />) : <h1>Loading...</h1>}
+      {data ? data.map((contact, key) => (
+        <ChatListItem
+          key={key} 
+          data={contact}
+          onClick={() => selectChat(contact)}
+        />)
+      ) : <h1>Loading...</h1>}
     </div>
   );
 }
 
-export default connect()(ChatListSideBar);
+const mapDispatchToProp = (dispatch) => ({
+  selectChat: (person) => dispatch(ChatAction.selectChat(person)),
+})
+
+export default connect(mapDispatchToProp)(ChatListSideBar);
