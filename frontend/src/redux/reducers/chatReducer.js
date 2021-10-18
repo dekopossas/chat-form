@@ -1,4 +1,4 @@
-const allReports = [{}, {}, {}, {}, {}, {}, {}]
+const allReports = []
 
 const INITIAL_STATE = {
   selectedPerson: {},

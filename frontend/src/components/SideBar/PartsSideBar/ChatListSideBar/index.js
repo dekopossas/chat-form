@@ -1,19 +1,26 @@
+import React, { useState, useEffect } from 'react';
 import ChatListItem from './ChatListComponents/ChatListItem';
 import style from './style.module.scss';
 import { connect } from 'react-redux';
+import api from '../../../../services/api';
 
-function ChatListSideBar(allReports) {
+function ChatListSideBar() {
+  const [data, seteData] = useState();
+
+  const loadData = async () => {
+    const response = await api.get('/suport');
+    seteData(response.data);
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
   return (
     <div className={style.chatList}>
-      {allReports.allReports.map((contact, key) => (
-        <ChatListItem key={key} />
-      ))}
+      {data ? data.map((contact, key) => <ChatListItem key={key} />) : <h1>Loading...</h1>}
     </div>
   );
 }
 
-const mapStateToProps = (state) => ({
-  allReports: state.chatReducer.allReports,
-});
-
-export default connect(mapStateToProps)(ChatListSideBar);
+export default connect()(ChatListSideBar);
