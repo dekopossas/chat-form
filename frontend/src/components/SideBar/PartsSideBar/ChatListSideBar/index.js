@@ -4,16 +4,10 @@ import style from './style.module.scss';
 import { connect } from 'react-redux';
 
 function ChatListSideBar(allReports) {
-  const [chatList, setChatList] = useState([]);
-
-  useEffect(() => {
-    setChatList(allReports);
-  },[allReports])
-
   return (
     <div className={style.chatList}>
       {
-        chatList.allReports.map((contact, key) => (
+        allReports.allReports.map((contact, key) => (
           <ChatListItem key={key} />
         ))
       }
