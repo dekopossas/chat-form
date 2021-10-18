@@ -1,7 +1,4 @@
-// API
-import api from '../../services/api';
-
-const allReports = api.get('/suport');
+const allReports = [{}, {}, {}, {}, {}, {}, {}]
 
 const INITIAL_STATE = {
   selectedPerson: {},
@@ -15,6 +12,7 @@ const chatReducer = (state = INITIAL_STATE, action) => {
       selectedPerson: action.person,
     };
   }
+  return state;
 };
 
 export default chatReducer;
