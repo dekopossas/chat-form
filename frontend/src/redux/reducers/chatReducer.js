@@ -8,7 +8,7 @@ const INITIAL_STATE = {
   allReports: [...allReports],
 };
 
-const chatReducers = (state = INITIAL_STATE, action) => {
+const chatReducer = (state = INITIAL_STATE, action) => {
   if (action.type === 'SELECT_REPORT') {
     return {
       ...state,
@@ -17,4 +17,4 @@ const chatReducers = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default chatReducers;
+export default chatReducer;
