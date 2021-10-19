@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   selectedPerson: {},
+  data: {},
 };
 
 const chatReducer = (state = INITIAL_STATE, action) => {
@@ -8,6 +9,12 @@ const chatReducer = (state = INITIAL_STATE, action) => {
       ...state,
       selectedPerson: action.person,
     };
+  }
+  if (action.type === 'SET_DATA') {
+    return {
+      ...state,
+      dataBase: action.data,
+    }
   }
   return state;
 };
