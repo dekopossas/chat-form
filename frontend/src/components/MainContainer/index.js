@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import ChatIntro from './PartsMainContainer/ChatIntro';
+import ChatWindow from './PartsMainContainer/ChatWindow';
+import { connect } from 'react-redux';
 import style from './style.module.scss';
 
-function MainContainer() {
-  const [activeChat, setActiveChat] = useState({});
+function MainContainer({ person }) {
   return (
     <div className={style.contentarea}>
-      <ChatIntro />
+      {/* <ChatWindow /> */}
+      <h1>aqui vai estar o person: {person.name}</h1>
+      {/* {
+        person ? <ChatWindow /> : <ChatIntro />
+      } */}
     </div>
   );
 }
 
-export default MainContainer;
+const mapStateToProps = (state) => ({
+  person: state.chatReducer.selectedPerson,
+});
+
+export default connect(mapStateToProps)(MainContainer);

@@ -2,27 +2,42 @@ import React, { useState, useEffect } from 'react';
 import ChatListItem from './ChatListComponents/ChatListItem';
 import style from './style.module.scss';
 import { connect } from 'react-redux';
+import api from '../../../../services/api';
+import * as ChatAction from '../../../../redux/actions/chatAction';
 
-function ChatListSideBar(allReports) {
-  const [chatList, setChatList] = useState([]);
+function ChatListSideBar({ selectChat }) {
+  const [data, seteData] = useState();
+  const [activeChat, setActiveChat] = useState();
+
+  const loadData = async () => {
+    const response = await api.get('/suport');
+    seteData(response.data);
+  };
 
   useEffect(() => {
-    setChatList(allReports);
-  },[allReports])
+    loadData();
+  }, []);
 
   return (
     <div className={style.chatList}>
-      {
-        chatList.allReports.map((contact, key) => (
-          <ChatListItem key={key} />
+      {data ? (
+        data.map((contact, key) => (
+          <ChatListItem
+            key={key}
+            data={contact}
+            action={true}
+            onClick={() => selectChat(contact)}
+          />
         ))
-      }
+      ) : (
+        <h1>Loading...</h1>
+      )}
     </div>
   );
 }
 
-const mapStateToProps = (state) => ({
-  allReports: state.chatReducer.allReports
-})
+const mapDispatchToProp = (dispatch) => ({
+  selectChat: (person) => dispatch(ChatAction.selectChat(person)),
+});
 
-export default connect(mapStateToProps)(ChatListSideBar);
+export default connect(null, mapDispatchToProp)(ChatListSideBar);
