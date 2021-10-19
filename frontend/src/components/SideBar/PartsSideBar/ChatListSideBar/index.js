@@ -20,7 +20,6 @@ function ChatListSideBar(prop) {
 
   return (
     <div className={style.chatList}>
-      {console.log(prop)}
       {data ? (
         data.map((contact, key) => (
           <ChatListItem
