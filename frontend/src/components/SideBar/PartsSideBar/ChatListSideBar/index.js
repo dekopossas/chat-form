@@ -6,12 +6,12 @@ import api from '../../../../services/api';
 import * as ChatAction from '../../../../redux/actions/chatAction';
 
 function ChatListSideBar({ selectChat }) {
-  const [data, seteData] = useState();
+  const [data, setData] = useState();
   const [activeChat, setActiveChat] = useState();
 
   const loadData = async () => {
     const response = await api.get('/suport');
-    seteData(response.data);
+    setData(response.data);
   };
 
   useEffect(() => {
@@ -24,7 +24,6 @@ function ChatListSideBar({ selectChat }) {
         data.map((contact, key) => (
           <ChatListItem
             key={key}
-            data={contact}
             active={true}
             onClick={() => selectChat(contact)}
           />

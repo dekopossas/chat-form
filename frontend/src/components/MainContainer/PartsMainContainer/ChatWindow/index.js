@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function ChatWindow(person) {
+function ChatWindow({person}) {
   return (
     <div>
       <h1>{person.name}</h1>
