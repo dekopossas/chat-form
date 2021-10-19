@@ -26,7 +26,7 @@ function ChatListSideBar(selectChat) {
             key={key}
             data={contact}
             action={true}
-            onClick={() => setActiveChat(contact[contact.id])}
+            onClick={() => setActiveChat(contact[key])}
           />
         ))
       ) : (
