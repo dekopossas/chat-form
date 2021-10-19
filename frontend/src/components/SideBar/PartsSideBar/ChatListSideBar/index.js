@@ -37,6 +37,7 @@ function ChatListSideBar({ selectChat }) {
 
 const mapDispatchToProp = (dispatch) => ({
   selectChat: (person) => dispatch(ChatAction.selectChat(person)),
+  setData: (data) => dispatch(ChatAction.setData(data))
 });
 
 export default connect(null, mapDispatchToProp)(ChatListSideBar);
