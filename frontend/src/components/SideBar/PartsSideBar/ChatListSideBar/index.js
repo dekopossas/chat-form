@@ -7,6 +7,7 @@ import * as ChatAction from '../../../../redux/actions/chatAction';
 
 function ChatListSideBar(selectChat) {
   const [data, seteData] = useState();
+  const [activeChat, setActiveChat] = useState();
 
   const loadData = async () => {
     const response = await api.get('/suport');
@@ -21,7 +22,12 @@ function ChatListSideBar(selectChat) {
     <div className={style.chatList}>
       {data ? (
         data.map((contact, key) => (
-          <ChatListItem key={key} data={contact} onClick={() => selectChat(contact)} />
+          <ChatListItem
+            key={key}
+            data={contact}
+            action={true}
+            onClick={() => setActiveChat(contact[contact.id])}
+          />
         ))
       ) : (
         <h1>Loading...</h1>
@@ -29,8 +35,6 @@ function ChatListSideBar(selectChat) {
     </div>
   );
 }
-
-
 
 const mapDispatchToProp = (dispatch) => ({
   selectChat: (person) => dispatch(ChatAction.selectedChat(person)),
