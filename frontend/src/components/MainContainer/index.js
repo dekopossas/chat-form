@@ -7,11 +7,9 @@ import style from './style.module.scss';
 function MainContainer({ person }) {
   return (
     <div className={style.contentarea}>
-      {/* <ChatWindow /> */}
-      <h1>aqui vai estar o person: {person.name}</h1>
-      {/* {
-        person ? <ChatWindow /> : <ChatIntro />
-      } */}
+      {
+        person.name ? <ChatWindow /> : <ChatIntro />
+      }
     </div>
   );
 }
