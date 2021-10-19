@@ -108,7 +108,7 @@ The following tools were used in the construction of the project:
 - [axios](https://github.com/axios/axios) Promise based HTTP client
 - [date-fns](https://date-fns.org/) Time library
 - [react hook form](https://react-hook-form.com/) forms library
-- [SASS](https://sass-lang.com/) CSS
+- [SASS](https://sass-lang.com/) pre-processing CSS
 
 ### Autor
 ---
