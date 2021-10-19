@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import api from '../../../../services/api';
 import * as ChatAction from '../../../../redux/actions/chatAction';
 
-function ChatListSideBar(selectChat) {
+function ChatListSideBar({selectChat}) {
   const [data, seteData] = useState();
   const [activeChat, setActiveChat] = useState();
 
@@ -26,7 +26,7 @@ function ChatListSideBar(selectChat) {
             key={key}
             data={contact}
             action={true}
-            onClick={() => setActiveChat(contact[key])}
+            onClick={() => selectChat(contact[key])}
           />
         ))
       ) : (
@@ -37,7 +37,7 @@ function ChatListSideBar(selectChat) {
 }
 
 const mapDispatchToProp = (dispatch) => ({
-  selectChat: (person) => dispatch(ChatAction.selectedChat(person)),
+  selectChat: (person) => dispatch(ChatAction.selectChat(person)),
 });
 
 export default connect(null, mapDispatchToProp)(ChatListSideBar);
