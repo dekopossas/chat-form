@@ -1,8 +1,5 @@
-const allReports = []
-
 const INITIAL_STATE = {
   selectedPerson: {},
-  allReports: [...allReports],
 };
 
 const chatReducer = (state = INITIAL_STATE, action) => {
