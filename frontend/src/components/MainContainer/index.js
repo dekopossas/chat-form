@@ -8,9 +8,10 @@ function MainContainer() {
 
   return (
     <div className={style.contentarea}>
-      {
+      <ChatWindow />
+      {/* {
         activeChat.id ? <ChatWindow /> : <ChatIntro />
-      }
+      } */}
     </div>
   );
 }
