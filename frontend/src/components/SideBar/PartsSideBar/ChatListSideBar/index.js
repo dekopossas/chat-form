@@ -24,6 +24,7 @@ function ChatListSideBar({ selectChat }) {
         data.map((contact, key) => (
           <ChatListItem
             key={key}
+            data={contact}
             active={true}
             onClick={() => selectChat(contact)}
           />
@@ -37,7 +38,7 @@ function ChatListSideBar({ selectChat }) {
 
 const mapDispatchToProp = (dispatch) => ({
   selectChat: (person) => dispatch(ChatAction.selectChat(person)),
-  setData: (data) => dispatch(ChatAction.setData(data))
+  // setData: (data) => dispatch(ChatAction.setData(data))
 });
 
 export default connect(null, mapDispatchToProp)(ChatListSideBar);

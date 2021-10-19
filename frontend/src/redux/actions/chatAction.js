@@ -5,9 +5,9 @@ export const selectChat = (person) => {
   };
 };
 
-export const setData = (data) => {
-  return {
-    type: 'SET_DATA',
-    data,
-  };
-};
+// export const setData = (data) => {
+//   return {
+//     type: 'SET_DATA',
+//     data,
+//   };
+// };

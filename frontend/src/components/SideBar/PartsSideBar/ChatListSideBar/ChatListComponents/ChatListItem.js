@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style.module.scss';
 
-function ChatListItem({ onClick, active }) {
+function ChatListItem({ onClick, active, data }) {
   return (
     <div onClick={onClick} className={active ? style.chatListItemactive : style.chatListItem}>
       <img
@@ -9,6 +9,7 @@ function ChatListItem({ onClick, active }) {
         src="https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png"
         alt="screen user chat"
       />
+      {console.log(data)}
       <div className={style.chatList_lines}>
         <div className={style.chatList_line}>
           <div className={style.chatList_nickname}>André Possas</div>
