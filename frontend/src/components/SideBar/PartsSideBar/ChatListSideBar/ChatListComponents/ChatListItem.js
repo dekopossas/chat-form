@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './style.module.scss';
 
-function ChatListItem({onClick}) {
+function ChatListItem({ onClick, active }) {
   return (
-    <div onClick={onClick} className={style.chatListItem}>
+    <div onClick={onClick} className={active ? style.chatListItemactive : style.chatListItem}>
       <img
         className={style.chatList_avatar}
         src="https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png"
