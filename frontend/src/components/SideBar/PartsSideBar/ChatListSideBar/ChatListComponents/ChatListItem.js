@@ -14,6 +14,7 @@ function ChatListItem({ onClick, active, data }) {
         src="https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png"
         alt="screen user chat"
       />
+      {console.log(data)}
       <div className={style.chatList_lines}>
         <div className={style.chatList_line}>
           <div className={style.chatList_nickname}>{data.name}</div>
