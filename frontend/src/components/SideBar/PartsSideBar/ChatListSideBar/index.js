@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import api from '../../../../services/api';
 import * as ChatAction from '../../../../redux/actions/chatAction';
 
-function ChatListSideBar({selectChat}) {
+function ChatListSideBar({ selectChat }) {
   const [data, seteData] = useState();
   const [activeChat, setActiveChat] = useState();
 
@@ -26,7 +26,7 @@ function ChatListSideBar({selectChat}) {
             key={key}
             data={contact}
             action={true}
-            onClick={() => selectChat(contact[key])}
+            onClick={() => selectChat(contact)}
           />
         ))
       ) : (
