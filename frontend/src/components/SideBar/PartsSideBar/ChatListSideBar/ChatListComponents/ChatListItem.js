@@ -11,10 +11,9 @@ function ChatListItem({ onClick, active, data }) {
     <div onClick={onClick} className={active ? style.chatListItemactive : style.chatListItem}>
       <img
         className={style.chatList_avatar}
-        src="https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png"
+        src="/image/avatares/avatar2.png"
         alt="screen user chat"
       />
-      {console.log(data)}
       <div className={style.chatList_lines}>
         <div className={style.chatList_line}>
           <div className={style.chatList_nickname}>{data.name}</div>
