@@ -13,11 +13,11 @@ function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
 
   const handleOpemEmoji = () => {
-    setEmojiOpem(true)
+    setEmojiOpem(true);
   };
 
   const handleCloseEmoji = () => {
-    setEmojiOpem(false)
+    setEmojiOpem(false);
   };
 
   return (
@@ -25,7 +25,11 @@ function ChatWindow({ person }) {
       <ChatHeader />
       <ChatBody />
       <EmojiArea emojiOpem={emojiOpem} />
-      <ChatFooter handleOpemEmoji={handleOpemEmoji} handleCloseEmoji={handleCloseEmoji} emojiOpem={emojiOpem} />
+      <ChatFooter
+        handleOpemEmoji={handleOpemEmoji}
+        handleCloseEmoji={handleCloseEmoji}
+        emojiOpem={emojiOpem}
+      />
     </div>
   );
 }
