@@ -1,0 +1,8 @@
+aside.emoji-picker-react {
+  width: auto;
+  background: none;
+}
+
+.emoji-picker-react .emoji-group:before {
+  background: none;
+}
