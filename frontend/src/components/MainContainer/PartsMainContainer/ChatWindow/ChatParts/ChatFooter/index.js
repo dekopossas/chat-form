@@ -10,6 +10,7 @@ function ChatFooter() {
   return (
     <div className={style.chatFooter}>
       <div className={style.chatPre}>
+        <div className={style.btn}>{/* <CloseIcon style={{color: '#919191'}}/> */}</div>
         <div className={style.btn}>{/* <InsertEmoticonIcon style={{color: '#919191'}}/> */}</div>
       </div>
       <div className={style.chatInputArea}>

@@ -7,12 +7,14 @@ import style from './style.module.scss';
 import ChatHeader from './ChatParts/ChatHeader';
 import ChatBody from './ChatParts/ChatBody';
 import ChatFooter from './ChatParts/ChatFooter';
+import EmojiArea from './ChatParts/EmojiArea';
 
 function ChatWindow({person}) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
       <ChatBody />
+      <EmojiArea />
       <ChatFooter />
     </div>
   );
