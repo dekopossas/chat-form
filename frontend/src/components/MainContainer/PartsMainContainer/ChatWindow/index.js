@@ -25,7 +25,7 @@ function ChatWindow({ person }) {
       <ChatHeader />
       <ChatBody />
       <EmojiArea emojiOpem={emojiOpem} />
-      <ChatFooter handleOpemEmoji={handleOpemEmoji} handleCloseEmoji={handleCloseEmoji} />
+      <ChatFooter handleOpemEmoji={handleOpemEmoji} handleCloseEmoji={handleCloseEmoji} emojiOpem={emojiOpem} />
     </div>
   );
 }
