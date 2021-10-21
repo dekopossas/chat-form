@@ -15,7 +15,7 @@ function ChatHeader() {
         <div className={style.name}>André Possas</div>
       </div>
       <div className={style.header_buttons}>
-      <div className={style.btn}>
+        <div className={style.btn}>
           {/* <SearchIcon style={{color: '#919191'}}/> */}
         </div>
         <div className={style.btn}>
