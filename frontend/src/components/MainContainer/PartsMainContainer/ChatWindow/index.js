@@ -1,5 +1,5 @@
 // Package
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import style from './style.module.scss';
 
@@ -9,13 +9,23 @@ import ChatBody from './ChatParts/ChatBody';
 import ChatFooter from './ChatParts/ChatFooter';
 import EmojiArea from './ChatParts/EmojiArea';
 
-function ChatWindow({person}) {
+function ChatWindow({ person }) {
+  const [emojiOpem, setEmojiOpem] = useState(false);
+
+  const handleOpemEmoji = () => {
+    setEmojiOpem(true)
+  };
+
+  const handleCloseEmoji = () => {
+    setEmojiOpem(false)
+  };
+
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
       <ChatBody />
-      <EmojiArea />
-      <ChatFooter />
+      <EmojiArea emojiOpem={emojiOpem} />
+      <ChatFooter handleOpemEmoji={handleOpemEmoji} handleCloseEmoji={handleCloseEmoji} />
     </div>
   );
 }

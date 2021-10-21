@@ -1,21 +1,20 @@
-import React, { useState } from 'react'
-import EmojiPicker from 'emoji-picker-react'
+import React from 'react';
+import EmojiPicker from 'emoji-picker-react';
 
 import style from './style.module.scss';
 import './style.css';
 
-function EmojiArea() {
-  const [emojiOpem, setEmojiOpem] = useState(false);
+function EmojiArea({ emojiOpem }) {
 
   const handleEmojiClick = () => {
 
   }
 
   return (
-    <div className={emojiOpem ? style.emoji : style.emojiOpem}>
+    <div className={!emojiOpem ? style.emoji : style.emojiOpem}>
       <EmojiPicker disableSearchBar disableSkinPicker onEmojiClick={handleEmojiClick} />
     </div>
-  )
+  );
 }
 
-export default EmojiArea
+export default EmojiArea;
