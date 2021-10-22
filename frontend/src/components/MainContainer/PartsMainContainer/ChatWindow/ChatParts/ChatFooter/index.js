@@ -6,7 +6,16 @@ import style from './style.module.scss';
 // import SendIcon from '@mui/icons-material/Send';
 // import MicIcon from '@mui/icons-material/Mic';
 
-function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem, text, setText }) {
+function ChatFooter({
+  handleOpemEmoji,
+  handleCloseEmoji,
+  emojiOpem,
+  text,
+  setText,
+  handleSendClick,
+  handleMicClick,
+  listening,
+}) {
   return (
     <div className={style.chatFooter}>
       <div className={style.chatPre}>
@@ -32,10 +41,18 @@ function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem, text, setTex
       </div>
       <div className={style.chatPos}>
         {text === '' && (
-          <div className={style.btn}>M{/* <MicIcon style={{color: '#919191'}}/> */}</div>
+          <div
+            className={style.btn}
+            style={{ color: listening ? '#126ece' : '#919191' }}
+            onClick={handleMicClick}
+          >
+            M{/* <MicIcon style={{color: '#919191'}}/> */}
+          </div>
         )}
         {text !== '' && (
-          <div className={style.btn}>V{/* <SendIcon style={{color: '#919191'}}/> */}</div>
+          <div className={style.btn} onClick={handleSendClick}>
+            V{/* <SendIcon style={{color: '#919191'}}/> */}
+          </div>
         )}
       </div>
     </div>

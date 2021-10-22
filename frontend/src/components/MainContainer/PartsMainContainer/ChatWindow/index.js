@@ -12,10 +12,34 @@ import EmojiArea from './ChatParts/EmojiArea';
 function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [text, setText] = useState();
+  const [listening, setListening] = useState(false);
+
+  // reccing voice msg
+  let recognition = null;
+  let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (SpeechRecognition !== undefined) {
+    recognition = new SpeechRecognition();
+  }
+  const handleMicClick = () => {
+    if (recognition !== null) {
+      recognition.onstart = () => {
+        setListening(true);
+      };
+      recognition.onend = () => {
+        setListening(false);
+      };
+      recognition.onresult = (e) => {
+        setText(e.results[0][0].transcript);
+      };
+      recognition.start();
+    }
+  };
+
+  const handleSendClick = () => {};
 
   const handleEmojiClick = (e, emojiObj) => {
     setText(text + emojiObj.emoji);
-  }
+  };
 
   const handleOpemEmoji = () => {
     setEmojiOpem(true);
@@ -36,6 +60,9 @@ function ChatWindow({ person }) {
         emojiOpem={emojiOpem}
         text={text}
         setText={setText}
+        handleSendClick={handleSendClick}
+        handleMicClick={handleMicClick}
+        listening={listening}
       />
     </div>
   );
