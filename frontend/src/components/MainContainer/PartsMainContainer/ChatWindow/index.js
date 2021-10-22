@@ -13,6 +13,7 @@ function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [text, setText] = useState();
   const [listening, setListening] = useState(false);
+  const [listMsg, setListMsg] = useState([]);
 
   // reccing voice msg
   let recognition = null;
@@ -52,7 +53,7 @@ function ChatWindow({ person }) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody />
+      <ChatBody listMsg={listMsg} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
