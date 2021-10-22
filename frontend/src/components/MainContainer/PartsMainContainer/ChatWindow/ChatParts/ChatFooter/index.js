@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './style.module.scss';
 
 // import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
@@ -6,9 +6,7 @@ import style from './style.module.scss';
 // import SendIcon from '@mui/icons-material/Send';
 // import MicIcon from '@mui/icons-material/Mic';
 
-function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem }) {
-  const [text, setText] = useState();
-
+function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem, text, setText }) {
   return (
     <div className={style.chatFooter}>
       <div className={style.chatPre}>

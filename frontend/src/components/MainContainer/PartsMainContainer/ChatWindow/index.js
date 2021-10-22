@@ -11,6 +11,11 @@ import EmojiArea from './ChatParts/EmojiArea';
 
 function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
+  const [text, setText] = useState();
+
+  const handleEmojiClick = (e, emojiObj) => {
+    setText(text + emojiObj.emoji);
+  }
 
   const handleOpemEmoji = () => {
     setEmojiOpem(true);
@@ -24,11 +29,13 @@ function ChatWindow({ person }) {
     <div className={style.chatWindow}>
       <ChatHeader />
       <ChatBody />
-      <EmojiArea emojiOpem={emojiOpem} />
+      <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
         emojiOpem={emojiOpem}
+        text={text}
+        setText={setText}
       />
     </div>
   );

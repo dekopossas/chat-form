@@ -4,8 +4,7 @@ import EmojiPicker from 'emoji-picker-react';
 import style from './style.module.scss';
 import './style.css';
 
-function EmojiArea({ emojiOpem }) {
-  const handleEmojiClick = () => {};
+function EmojiArea({ emojiOpem, handleEmojiClick }) {
 
   return (
     <div className={!emojiOpem ? style.emoji : style.emojiOpem}>
