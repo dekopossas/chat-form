@@ -34,7 +34,7 @@ function ChatFooter({
         <input
           type="text"
           className={style.chatInput}
-          placeholder="Digite uma mensagem"
+          placeholder={listening ? 'Clique fora para parar de gravar!' : "Digite uma mensagem"}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
