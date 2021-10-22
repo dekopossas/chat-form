@@ -31,7 +31,12 @@ function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem, text, setTex
         />
       </div>
       <div className={style.chatPos}>
-        <div className={style.btn}>V{/* <SendIcon style={{color: '#919191'}}/> */}</div>
+        {text === '' && (
+          <div className={style.btn}>M{/* <MicIcon style={{color: '#919191'}}/> */}</div>
+        )}
+        {text !== '' && (
+          <div className={style.btn}>V{/* <SendIcon style={{color: '#919191'}}/> */}</div>
+        )}
       </div>
     </div>
   );
