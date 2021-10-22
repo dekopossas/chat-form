@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './style.module.scss';
 
 // import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
@@ -7,6 +7,8 @@ import style from './style.module.scss';
 // import MicIcon from '@mui/icons-material/Mic';
 
 function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem }) {
+  const [text, setText] = useState();
+
   return (
     <div className={style.chatFooter}>
       <div className={style.chatPre}>
@@ -22,7 +24,13 @@ function ChatFooter({ handleOpemEmoji, handleCloseEmoji, emojiOpem }) {
         </div>
       </div>
       <div className={style.chatInputArea}>
-        <input type="text" className={style.chatInput} placeholder="Digite uma mensagem" />
+        <input
+          type="text"
+          className={style.chatInput}
+          placeholder="Digite uma mensagem"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
       </div>
       <div className={style.chatPos}>
         <div className={style.btn}>V{/* <SendIcon style={{color: '#919191'}}/> */}</div>
