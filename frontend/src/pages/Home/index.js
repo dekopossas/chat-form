@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
-import style from './style.module.scss';
-import Form from '../../components/Form';
+import './style.css';
 
 function Home() {
   const history = useHistory();
@@ -9,68 +8,104 @@ function Home() {
   const goSuport = () => history.push('/suport');
 
   return (
-    <div className={style.container}>
-      <div className={style.first_content}>
-        <div className={style.first_column}>
-          <h2 className={style.title}>Bem vindo de volta!</h2>
-          <p className={style.description}>Conecte-se agora</p>
-          <button className={style.btn}>Entrar</button>
+    <div class="container">
+      <div class="content first-content">
+        <div class="first-column">
+          <h2 class="title title-primary">welcome back!</h2>
+          <p class="description description-primary">To keep connected with us</p>
+          <p class="description description-primary">please login with your personal info</p>
+          <button id="signin" class="btn btn-primary">
+            sign in
+          </button>
         </div>
-        <div className={style.second_column}>
-          <h2 className={style.title}>Criar Conta</h2>
-          <div className={style.social_link}>
-            <ul>
-              <li>
-                <a href="#">facebook</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">linkedin</a>
-              </li>
+        <div class="second-column">
+          <h2 class="title title-second">create account</h2>
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
             </ul>
           </div>
-          <p className={style.description}>Ou preencha os campos a baixo</p>
-          <form className={style.form}>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit" className={style.btn}>
-              Cadastrar
-            </button>
+          <p class="description description-second">or use your email for registration:</p>
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="far fa-user icon-modify"></i>
+              <input type="text" placeholder="Name" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="far fa-envelope icon-modify"></i>
+              <input type="email" placeholder="Email" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input type="password" placeholder="Password" />
+            </label>
+
+            <button class="btn btn-second">sign up</button>
           </form>
         </div>
       </div>
-      <div className={style.second_content}>
-        <div className={style.first_column}>
-          <h2 className={style.title}>Bem vindo de volta!</h2>
-          <p className={style.description}>Conecte-se agora</p>
-          <button className={style.btn}>Entrar</button>
+      <div class="content second-content">
+        <div class="first-column">
+          <h2 class="title title-primary">hello, friend!</h2>
+          <p class="description description-primary">Enter your personal details</p>
+          <p class="description description-primary">and start journey with us</p>
+          <button id="signup" class="btn btn-primary">
+            sign up
+          </button>
         </div>
-        <div className={style.second_column}>
-          <h2 className={style.title}>Criar Conta</h2>
-          <div className={style.social_link}>
-            <ul>
-              <li>
-                <a href="#">facebook</a>
-              </li>
-              <li>
-                <a href="#">google</a>
-              </li>
-              <li>
-                <a href="#">linkedin</a>
-              </li>
+        <div class="second-column">
+          <h2 class="title title-second">sign in to developer</h2>
+          <div class="social-media">
+            <ul class="list-social-media">
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-facebook-f"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-google-plus-g"></i>
+                </li>
+              </a>
+              <a class="link-social-media" href="#">
+                <li class="item-social-media">
+                  <i class="fab fa-linkedin-in"></i>
+                </li>
+              </a>
             </ul>
           </div>
-          <p className={style.description}>Ou preencha os campos a baixo</p>
-          <form className={style.form}>
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <button type="submit" className={style.btn}>
-              Cadastrar
-            </button>
+          <p class="description description-second">or use your email account:</p>
+          <form class="form">
+            <label class="label-input" for="">
+              <i class="far fa-envelope icon-modify"></i>
+              <input type="email" placeholder="Email" />
+            </label>
+
+            <label class="label-input" for="">
+              <i class="fas fa-lock icon-modify"></i>
+              <input type="password" placeholder="Password" />
+            </label>
+
+            <a class="password" href="#">
+              forgot your password?
+            </a>
+            <button class="btn btn-second">sign in</button>
           </form>
         </div>
       </div>
