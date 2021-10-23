@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router';
+import Form from '../../components/Form';
 
 function Home() {
   const history = useHistory();
@@ -7,10 +8,8 @@ function Home() {
   const goSuport = () => history.push('/suport');
 
   return (
-    <div className="app-window">
-      <h1>Bem Vindo ao Atendimento Dinamico!</h1>
-
-      <button onClick={goSuport}>Suporte</button>
+    <div>
+      <Form />
     </div>
   );
 }

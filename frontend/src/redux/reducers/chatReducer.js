@@ -1,4 +1,9 @@
 const INITIAL_STATE = {
+  user: {
+    id: '',
+    avatar: '',
+    name: '',
+  },
   selectedPerson: {},
   // dataBase: {},
 };
