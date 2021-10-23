@@ -20,9 +20,15 @@ function Home() {
           <h2 className={style.title}>Criar Conta</h2>
           <div className={style.social_link}>
             <ul>
-              <li><a href="#">facebook</a></li>
-              <li><a href="#">google</a></li>
-              <li><a href="#">linkedin</a></li>
+              <li>
+                <a href="#">facebook</a>
+              </li>
+              <li>
+                <a href="#">google</a>
+              </li>
+              <li>
+                <a href="#">linkedin</a>
+              </li>
             </ul>
           </div>
           <p className={style.description}>Ou preencha os campos a baixo</p>
@@ -30,12 +36,14 @@ function Home() {
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <button type="submit" className={style.btn} >Cadastrar</button>
+            <button type="submit" className={style.btn}>
+              Cadastrar
+            </button>
           </form>
         </div>
       </div>
       <div className={style.second_content}>
-      <div className={style.first_column}>
+        <div className={style.first_column}>
           <h2 className={style.title}>Bem vindo de volta!</h2>
           <p className={style.description}>Conecte-se agora</p>
           <button className={style.btn}>Entrar</button>
@@ -44,9 +52,15 @@ function Home() {
           <h2 className={style.title}>Criar Conta</h2>
           <div className={style.social_link}>
             <ul>
-              <li><a href="#">facebook</a></li>
-              <li><a href="#">google</a></li>
-              <li><a href="#">linkedin</a></li>
+              <li>
+                <a href="#">facebook</a>
+              </li>
+              <li>
+                <a href="#">google</a>
+              </li>
+              <li>
+                <a href="#">linkedin</a>
+              </li>
             </ul>
           </div>
           <p className={style.description}>Ou preencha os campos a baixo</p>
@@ -54,7 +68,9 @@ function Home() {
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <button type="submit" className={style.btn} >Cadastrar</button>
+            <button type="submit" className={style.btn}>
+              Cadastrar
+            </button>
           </form>
         </div>
       </div>
