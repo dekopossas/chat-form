@@ -16,12 +16,15 @@ function ChatHeader() {
       </div>
       <div className={style.header_buttons}>
         <div className={style.btn}>
+        <i class="fas fa-search-plus" style={{color: '#919191'}} ></i>
           {/* <SearchIcon style={{color: '#919191'}}/> */}
         </div>
         <div className={style.btn}>
+        <i class="fas fa-paperclip" style={{color: '#919191'}} ></i>
           {/* <AttachFileIcon style={{color: '#919191'}}/> */}
         </div>
         <div className={style.btn}>
+        <i class="fas fa-list-ul" style={{color: '#919191'}} ></i>
           {/* <MoreHorizIcon style={{color: '#919191'}}/> */}
         </div>
       </div>

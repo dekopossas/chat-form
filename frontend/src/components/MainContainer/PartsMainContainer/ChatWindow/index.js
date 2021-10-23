@@ -11,7 +11,7 @@ import EmojiArea from './ChatParts/EmojiArea';
 
 function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
-  const [text, setText] = useState();
+  const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
   const [listMsg, setListMsg] = useState([
     { author: 1, body: 'Hello'},

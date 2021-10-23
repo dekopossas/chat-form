@@ -19,12 +19,15 @@ function HeaderSideBar() {
       />
       <div className={style.header_buttons}>
         <div className={style.header_icons}>
+        <i class="fas fa-sync-alt" style={{color: '#919191'}} ></i>
           {/* <DonutLargeIcon style={{color: '#919191'}} /> */}
         </div>
         <div className={style.header_icons}>
+        <i class="fas fa-comments" style={{color: '#919191'}} ></i>
           {/* <ChatIcon style={{color: '#919191'}} /> */}
         </div>
         <div className={style.header_icons}>
+        <i class="fas fa-list-ul" style={{color: '#919191'}} ></i>
           {/* <MoreVertIcon style={{color: '#919191'}} /> */}
         </div>
       </div>
