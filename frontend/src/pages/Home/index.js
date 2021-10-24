@@ -3,110 +3,116 @@ import { useHistory } from 'react-router';
 import './style.css';
 
 function Home() {
-  const [left, setLeft] = useState(false)
+  const [left, setLeft] = useState(true);
   const history = useHistory();
 
   const goSuport = () => history.push('/suport');
 
   return (
-    <div className={ left ? 'sign-in-js' : 'sign-up-js'}>
-      <div class="container">
-        <div class="content first-content">
-          <div class="first-column">
-            <h2 class="title title-primary">Já tenho conta!</h2>
-            <p class="description description-primary">Conecti-se aqui</p>
-            <button id="signin" class="btn btn-primary" onClick={() => setLeft(true)}>
+    <div className={left ? 'sign-in-js' : 'sign-up-js'}>
+      <div className="container">
+        <div className="content first-content">
+          <div className="first-column">
+            <h2 className="title title-primary">Já tenho conta!</h2>
+            <p className="description description-primary">Conecti-se aqui</p>
+            <button type="button" className="btn btn-primary" onClick={() => setLeft(true)}>
               Entrar
             </button>
           </div>
-          <div class="second-column">
-            <h2 class="title title-second">Criando sua Conta</h2>
-            <div class="social-media">
-              <ul class="list-social-media">
-                <a class="link-social-media" href="#">
-                  <li class="item-social-media">
-                    <i class="fab fa-facebook-f"></i>
+          <div className="second-column">
+            <h2 className="title title-second">Criando sua Conta</h2>
+            <p className="description description-second">Continuar com:</p>
+
+            <div className="social-media">
+              <ul className="list-social-media">
+                <a className="link-social-media" href="#">
+                  <li className="item-social-media">
+                    <i className="fab fa-facebook-f"></i>
                   </li>
                 </a>
-                <a class="link-social-media" href="#">
-                  <li class="item-social-media">
-                    <i class="fab fa-google-plus-g"></i>
+                <a className="link-social-media" href="#">
+                  <li className="item-social-media">
+                    <i className="fab fa-google-plus-g"></i>
                   </li>
                 </a>
-                <a class="link-social-media" href="#">
-                  <li class="item-social-media">
-                    <i class="fab fa-linkedin-in"></i>
+                <a className="link-social-media" href="#">
+                  <li className="item-social-media">
+                    <i className="fab fa-linkedin-in"></i>
                   </li>
                 </a>
               </ul>
             </div>
-            <p class="description description-second">Ou preencha os campos a baixo:</p>
-            <form class="form">
-              <label class="label-input" for="">
-                <i class="far fa-user icon-modify"></i>
+            <p className="description description-second">Ou preencha os campos a baixo:</p>
+            <form className="form">
+              <label className="label-input" for="">
+                <i className="far fa-user icon-modify"></i>
                 <input type="text" placeholder="Name" />
               </label>
 
-              <label class="label-input" for="">
-                <i class="far fa-envelope icon-modify"></i>
+              <label className="label-input" for="">
+                <i className="far fa-envelope icon-modify"></i>
                 <input type="email" placeholder="Email" />
               </label>
 
-              <label class="label-input" for="">
-                <i class="fas fa-lock icon-modify"></i>
+              <label className="label-input" for="">
+                <i className="fas fa-lock icon-modify"></i>
                 <input type="password" placeholder="Password" />
               </label>
 
-              <button typo="submit" class="btn btn-second">Cadastrar</button>
+              <button typo="submit" className="btn btn-second">
+                Cadastrar
+              </button>
             </form>
           </div>
         </div>
-        <div class="content second-content">
-          <div class="first-column">
-            <h2 class="title title-primary">hello, friend!</h2>
-            <p class="description description-primary">Enter your personal details</p>
-            <p class="description description-primary">and start journey with us</p>
-            <button id="signup" class="btn btn-primary">
-              sign up
+        <div className="content second-content">
+          <div className="first-column">
+            <h2 className="title title-primary">Ainda não tenho conta?</h2>
+            <p className="description description-primary">Embarque nessa aventura de</p>
+            <p className="description description-primary">auto conhecimento com a gente</p>
+            <button type="button" className="btn btn-primary" onClick={() => setLeft(false)}>
+              Cadastro
             </button>
           </div>
-          <div class="second-column">
-            <h2 class="title title-second">sign in to developer</h2>
-            <div class="social-media">
-              <ul class="list-social-media">
-                <a class="link-social-media" href="#">
-                  <li class="item-social-media">
-                    <i class="fab fa-facebook-f"></i>
+          <div className="second-column">
+            <h2 className="title title-second">Entrar</h2>
+            <p className="description description-second">Continuar com:</p>
+            <div className="social-media">
+
+              <ul className="list-social-media">
+                <a className="link-social-media" href="#">
+                  <li className="item-social-media">
+                    <i className="fab fa-facebook-f"></i>
                   </li>
                 </a>
-                <a class="link-social-media" href="#">
-                  <li class="item-social-media">
-                    <i class="fab fa-google-plus-g"></i>
+                <a className="link-social-media" href="#">
+                  <li className="item-social-media">
+                    <i className="fab fa-google-plus-g"></i>
                   </li>
                 </a>
-                <a class="link-social-media" href="#">
-                  <li class="item-social-media">
-                    <i class="fab fa-linkedin-in"></i>
+                <a className="link-social-media" href="#">
+                  <li className="item-social-media">
+                    <i className="fab fa-linkedin-in"></i>
                   </li>
                 </a>
               </ul>
             </div>
-            <p class="description description-second">or use your email account:</p>
-            <form class="form">
-              <label class="label-input" for="">
-                <i class="far fa-envelope icon-modify"></i>
+            <p className="description description-second">Ou preencha os campos a baixo:</p>
+            <form className="form">
+              <label className="label-input" for="">
+                <i className="far fa-envelope icon-modify"></i>
                 <input type="email" placeholder="Email" />
               </label>
 
-              <label class="label-input" for="">
-                <i class="fas fa-lock icon-modify"></i>
+              <label className="label-input" for="">
+                <i className="fas fa-lock icon-modify"></i>
                 <input type="password" placeholder="Password" />
               </label>
 
-              <a class="password" href="#">
-                forgot your password?
+              <a className="password" href="#">
+                Esqueceu sua senha?
               </a>
-              <button class="btn btn-second">sign in</button>
+              <button type="button" className="btn btn-second">Entrar</button>
             </form>
           </div>
         </div>
