@@ -13,6 +13,11 @@
       "city": "Belo Horizonte",
       "birthday": "05/07/1995",
       "id": "lucasminatelli@gmail.com"
+    },
+    {
+      "name": "deko",
+      "id": "andre@possas.com",
+      "password": "321321321"
     }
   ],
   "suport": [
