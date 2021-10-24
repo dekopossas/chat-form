@@ -4,22 +4,31 @@ import api from '../../services/api';
 import { useHistory } from 'react-router';
 
 function Login() {
-  const initialValues = {};
+  const createAccInitialValue = {
+    name: "",
+    id: "",
+    password: "",
+  };
+
   const history = useHistory();
   
-  const handleSubmit = async (values) => {
-    const response = await api.post('/suport', values);
-    if (response.status === 201) {
-      alert('Contato salvo com sucesso.');
-      history.push('/');
-    } else {
-      alert('Algo deu errado.');
+  const handleSubmitCreateAcc = async (values) => {
+    // alert(JSON.stringify(values));
+    try {
+      const response = await api.post('/users', values);
+      if (response.status === 201) {
+        alert('Conta criada com sucesso.');
+      } else {
+        alert('Algo deu errado.');
+      }
+    } catch(err) {
+      alert('Email já utilizado.');
     }
   };
 
   return (
     <div>
-      <LoginForm initialValues={initialValues} handleSubmit={handleSubmit} />
+      <LoginForm createAccInitialValue={createAccInitialValue} handleSubmitCreateAcc={handleSubmitCreateAcc} />
     </div>
   );
 }

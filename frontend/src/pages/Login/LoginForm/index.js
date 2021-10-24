@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as yup from 'yup';
+
 import './style.css';
 
-function LoginForm() {
+function LoginForm({ createAccInitialValue, handleSubmitCreateAcc }) {
   const [left, setLeft] = useState(true);
   const history = useHistory();
+
+  const validations = yup.object().shape({
+    name: yup.string().min(3).required(),
+    id: yup.string().email().required(),
+    password: yup.string().min(8).required(),
+  });
 
   const goSuport = () => history.push('/suport');
 
@@ -20,7 +29,7 @@ function LoginForm() {
             </button>
           </div>
           <div className="second-column">
-            <h2 className="title title-second">Criando sua Conta</h2>
+            <h2 className="title title-second">Crie sua Conta</h2>
             <p className="description description-second">Continuar com:</p>
 
             <div className="social-media">
@@ -43,26 +52,33 @@ function LoginForm() {
               </ul>
             </div>
             <p className="description description-second">Ou preencha os campos a baixo:</p>
-            <form className="form">
-              <label className="label-input" for="">
-                <i className="far fa-user icon-modify"></i>
-                <input type="text" placeholder="Name" />
-              </label>
+            <Formik
+              initialValues={createAccInitialValue}
+              onSubmit={handleSubmitCreateAcc}
+              validationSchema={validations}
+            >
+              <Form className="form">
+                <label className="label-input" for="name">
+                  <i className="far fa-user icon-modify"></i>
+                  <Field type="text" name="name" placeholder="Escreva seu nome ^^" />
+                </label>
+                <ErrorMessage className="form_error" component="span" name="name" />
 
-              <label className="label-input" for="">
-                <i className="far fa-envelope icon-modify"></i>
-                <input type="email" placeholder="Email" />
-              </label>
+                <label className="label-input" for="id">
+                  <i className="far fa-envelope icon-modify"></i>
+                  <Field type="email" name="id" placeholder="Aqui seu Email" />
+                </label>
 
-              <label className="label-input" for="">
-                <i className="fas fa-lock icon-modify"></i>
-                <input type="password" placeholder="Password" />
-              </label>
+                <label className="label-input" for="password">
+                  <i className="fas fa-lock icon-modify"></i>
+                  <Field type="password" name="password" placeholder="Crie uma senha.." />
+                </label>
 
-              <button typo="submit" className="btn btn-second">
-                Cadastrar
-              </button>
-            </form>
+                <button type="submit" className="btn btn-second">
+                  Cadastrar
+                </button>
+              </Form>
+            </Formik>
           </div>
         </div>
         <div className="content second-content">
