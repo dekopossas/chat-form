@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 
@@ -12,15 +11,17 @@ function LoginForm({
   handleSubmitLogin,
 }) {
   const [left, setLeft] = useState(true);
-  const history = useHistory();
 
-  const validations = yup.object().shape({
+  const validationsCreateAcc = yup.object().shape({
     name: yup.string().min(3).required(),
     id: yup.string().email().required(),
     password: yup.string().min(8).required(),
   });
 
-  const goSuport = () => history.push('/suport');
+  const validationsLogin = yup.object().shape({
+    id: yup.string().email().required(),
+    password: yup.string().min(8).required(),
+  });
 
   return (
     <div className={left ? 'sign-in-js' : 'sign-up-js'}>
@@ -60,7 +61,7 @@ function LoginForm({
             <Formik
               initialValues={createAccInitialValue}
               onSubmit={handleSubmitCreateAcc}
-              validationSchema={validations}
+              validationSchema={validationsCreateAcc}
             >
               <Form className="form">
                 <label className="label-input" for="name">
@@ -73,12 +74,12 @@ function LoginForm({
                   <i className="far fa-envelope icon-modify"></i>
                   <Field type="email" name="id" placeholder="Aqui seu Email" />
                 </label>
-
+                <ErrorMessage className="form_error" component="span" name="id" />
                 <label className="label-input" for="password">
                   <i className="fas fa-lock icon-modify"></i>
                   <Field type="password" name="password" placeholder="Crie uma senha.." />
                 </label>
-
+                <ErrorMessage className="form_error" component="span" name="password" />
                 <button type="submit" className="btn btn-second">
                   Cadastrar
                 </button>
@@ -118,24 +119,30 @@ function LoginForm({
               </ul>
             </div>
             <p className="description description-second">Ou preencha os campos a baixo:</p>
-            <form className="form">
-              <label className="label-input" for="">
-                <i className="far fa-envelope icon-modify"></i>
-                <input type="email" placeholder="Email" />
-              </label>
-
-              <label className="label-input" for="">
-                <i className="fas fa-lock icon-modify"></i>
-                <input type="password" placeholder="Password" />
-              </label>
-
-              <a className="password" href="#">
-                Esqueceu sua senha?
-              </a>
-              <button type="button" className="btn btn-second" onClick={() => goSuport()}>
-                Entrar
-              </button>
-            </form>
+            <Formik
+              initialValues={loginInitialValue}
+              onSubmit={handleSubmitLogin}
+              validationSchema={validationsLogin}
+            >
+              <Form className="form">
+                <label className="label-input" for="id">
+                  <i className="far fa-envelope icon-modify"></i>
+                  <Field type="email" name="id" placeholder="Email" />
+                </label>
+                <ErrorMessage className="form_error" component="span" name="id" />
+                <label className="label-input" for="password">
+                  <i className="fas fa-lock icon-modify"></i>
+                  <Field type="password" name="password" placeholder="Password" />
+                </label>
+                <ErrorMessage className="form_error" component="span" name="password" />
+                <a className="password" href="#">
+                  Esqueceu sua senha?
+                </a>
+                <button type="submit" className="btn btn-second">
+                  Entrar
+                </button>
+              </Form>
+            </Formik>
           </div>
         </div>
       </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 import LoginForm from '../Login/LoginForm';
 import api from '../../services/api';
-// import { useHistory } from 'react-router';
+import { useHistory } from 'react-router';
 
 function Login() {
-  // const history = useHistory();
+  const history = useHistory();
 
   // ----------------------------------------------------------------
   // Create Accont
@@ -32,24 +32,27 @@ function Login() {
   // ----------------------------------------------------------------
   // Login
   // ----------------------------------------------------------------
-
   const loginInitialValue = {
     id: '',
     password: '',
   };
 
   const handleSubmitLogin = async (values) => {
+    // alert(JSON.stringify(values));
     try {
-      alert(JSON.stringify(values));
-      // const response = await api.post('/users', values);
-      // if (response.status === 201) {
-      //   alert('Conta criada com sucesso.');
-      // } else {
-      //   alert('Algo deu errado.');
-      // }
+      const response = await api.get(`/users/${values.id}`, values);
+      if (response.status === 200) {
+        if (response.data.password === values.password) {
+          alert('Logando');
+          history.push('/suport')
+        } else{
+          alert('Senha Incorreta.')
+        }
+      } else {
+        alert('Algo deu errado.');
+      }
     } catch (err) {
-      console.log(err);
-      alert('Email já utilizado.');
+      alert('Email invalido.');
     }
   };
 
