@@ -7,7 +7,6 @@ import * as ChatAction from '../../../../redux/actions/chatAction';
 
 function ChatListSideBar(prop) {
   const [data, setData] = useState();
-  const [activeChat, setActiveChat] = useState();
 
   const loadData = async () => {
     const response = await api.get('/suport');

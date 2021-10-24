@@ -1,17 +1,17 @@
 import React from 'react';
 import LoginForm from '../Login/LoginForm';
 import api from '../../services/api';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 
 function Login() {
   const createAccInitialValue = {
-    name: "",
-    id: "",
-    password: "",
+    name: '',
+    id: '',
+    password: '',
   };
 
-  const history = useHistory();
-  
+  // const history = useHistory();
+
   const handleSubmitCreateAcc = async (values) => {
     // alert(JSON.stringify(values));
     try {
@@ -21,14 +21,17 @@ function Login() {
       } else {
         alert('Algo deu errado.');
       }
-    } catch(err) {
+    } catch (err) {
       alert('Email já utilizado.');
     }
   };
 
   return (
     <div>
-      <LoginForm createAccInitialValue={createAccInitialValue} handleSubmitCreateAcc={handleSubmitCreateAcc} />
+      <LoginForm
+        createAccInitialValue={createAccInitialValue}
+        handleSubmitCreateAcc={handleSubmitCreateAcc}
+      />
     </div>
   );
 }
