@@ -1,20 +1,23 @@
 {
-  "suport": [
+  "users": [
     {
-      "id": 1,
       "name": "André de Castro Possas",
       "city": "Belo Horizonte",
       "state": "Minas Gerais",
       "birthday": "19/01/1991",
-      "email": "andrepossas@gmail.com"
+      "id": "andrepossas@gmail.com"
     },
     {
-      "id": 2,
       "name": "Lucas Minatelli",
       "state": "Minas Gerais",
       "city": "Belo Horizonte",
       "birthday": "05/07/1995",
-      "email": "lucasminatelli@gmail.com"
+      "id": "lucasminatelli@gmail.com"
+    }
+  ],
+  "suport": [
+    {
+      "id": "1"
     }
   ]
 }
