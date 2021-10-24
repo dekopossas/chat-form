@@ -5,7 +5,12 @@ import * as yup from 'yup';
 
 import './style.css';
 
-function LoginForm({ createAccInitialValue, handleSubmitCreateAcc }) {
+function LoginForm({
+  createAccInitialValue,
+  handleSubmitCreateAcc,
+  loginInitialValue,
+  handleSubmitLogin,
+}) {
   const [left, setLeft] = useState(true);
   const history = useHistory();
 
