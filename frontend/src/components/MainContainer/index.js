@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ChatIntro from './PartsMainContainer/ChatIntro';
 import ChatWindow from './PartsMainContainer/ChatWindow';
 import { connect } from 'react-redux';
