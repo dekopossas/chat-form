@@ -4,14 +4,17 @@ import api from '../../services/api';
 import { useHistory } from 'react-router';
 
 function Login() {
+  const history = useHistory();
+
+  // ----------------------------------------------------------------
+  // Create Accont
+  // ----------------------------------------------------------------
   const createAccInitialValue = {
-    name: "",
-    id: "",
-    password: "",
+    name: '',
+    id: '',
+    password: '',
   };
 
-  const history = useHistory();
-  
   const handleSubmitCreateAcc = async (values) => {
     // alert(JSON.stringify(values));
     try {
@@ -21,14 +24,46 @@ function Login() {
       } else {
         alert('Algo deu errado.');
       }
-    } catch(err) {
+    } catch (err) {
       alert('Email já utilizado.');
+    }
+  };
+
+  // ----------------------------------------------------------------
+  // Login
+  // ----------------------------------------------------------------
+  const loginInitialValue = {
+    id: '',
+    password: '',
+  };
+
+  const handleSubmitLogin = async (values) => {
+    // alert(JSON.stringify(values));
+    try {
+      const response = await api.get(`/users/${values.id}`, values);
+      if (response.status === 200) {
+        if (response.data.password === values.password) {
+          alert('Logando');
+          history.push('/suport')
+        } else{
+          alert('Senha Incorreta.')
+        }
+      } else {
+        alert('Algo deu errado.');
+      }
+    } catch (err) {
+      alert('Email invalido.');
     }
   };
 
   return (
     <div>
-      <LoginForm createAccInitialValue={createAccInitialValue} handleSubmitCreateAcc={handleSubmitCreateAcc} />
+      <LoginForm
+        createAccInitialValue={createAccInitialValue}
+        handleSubmitCreateAcc={handleSubmitCreateAcc}
+        loginInitialValue={loginInitialValue}
+        handleSubmitLogin={handleSubmitLogin}
+      />
     </div>
   );
 }
