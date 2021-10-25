@@ -25,7 +25,7 @@ function Login() {
         alert('Algo deu errado.');
       }
     } catch (err) {
-      alert('Email já utilizado.');
+      alert(err);
     }
   };
 
