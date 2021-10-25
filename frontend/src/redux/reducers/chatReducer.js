@@ -9,19 +9,20 @@ const INITIAL_STATE = {
 };
 
 const chatReducer = (state = INITIAL_STATE, action) => {
-  if (action.type === 'SELECT_REPORT') {
-    return {
-      ...state,
-      selectedPerson: action.person,
-    };
+  switch (action.type) {
+    case 'SELECT_REPORT':
+      return {
+        ...state,
+        selectedPerson: action.person,
+      };
+    case 'SET_DATA':
+      return {
+        ...state,
+        dataBase: action.data,
+      };
+    default:
+      return state;
   }
-  // if (action.type === 'SET_DATA') {
-  //   return {
-  //     ...state,
-  //     dataBase: action.data,
-  //   }
-  // }
-  return state;
 };
 
 export default chatReducer;
