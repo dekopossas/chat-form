@@ -12,12 +12,27 @@
       "state": "Minas Gerais",
       "city": "Belo Horizonte",
       "birthday": "05/07/1995",
-      "id": "lucasminatelli@gmail.com"
+      "id": "lucasminatelli2@gmail.com"
+    },
+    {
+      "name": "lucas",
+      "id": "lucas@minatelli.com",
+      "password": "321321321"
     }
   ],
   "suport": [
     {
-      "id": "1"
+      "id": "1",
+      "name": "lucas",
+      "chat":[
+        { "author": "andre", "payload": "Colé!"  },
+        { "author": "lucas", "payload": "tudo bem?"  },
+        { "author": "andre", "payload": "tudo!"  }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "André de Castro Possas"
     }
   ]
 }
