@@ -75,7 +75,7 @@ function ChatWindow({ person }) {
 }
 
 const mapStateToProps = (state) => ({
-  person: state.chatReducer.selectedPerson,
+  user: state.userReducer.user,
 });
 
 export default connect(mapStateToProps)(ChatWindow);
