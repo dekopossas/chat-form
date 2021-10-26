@@ -9,7 +9,7 @@ import ChatBody from './ChatParts/ChatBody';
 import ChatFooter from './ChatParts/ChatFooter';
 import EmojiArea from './ChatParts/EmojiArea';
 
-function ChatWindow({ person }) {
+function ChatWindow({ userLogged }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [user, setUser] = useState({})
   const [text, setText] = useState('');
@@ -75,7 +75,7 @@ function ChatWindow({ person }) {
 }
 
 const mapStateToProps = (state) => ({
-  user: state.userReducer.user,
+  userLogged: state.userReducer.userLogged,
 });
 
 export default connect(mapStateToProps)(ChatWindow);
