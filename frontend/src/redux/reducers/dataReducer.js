@@ -2,7 +2,7 @@
     dataBase: {},
   };
   
-  const chatReducer = (state = INITIAL_STATE, action) => {
+  const dataReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
       case 'SET_DATA':
         return {
@@ -14,5 +14,5 @@
     }
   };
   
-  export default chatReducer;
+  export default dataReducer;
   
