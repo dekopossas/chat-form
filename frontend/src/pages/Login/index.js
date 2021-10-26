@@ -3,6 +3,7 @@ import LoginForm from '../Login/LoginForm';
 import api from '../../services/api';
 import { useHistory } from 'react-router';
 import { connect } from 'react-redux';
+import * as userActions from '../../redux/actions/userActions'
 
 function Login() {
   const history = useHistory();
@@ -69,4 +70,8 @@ function Login() {
   );
 }
 
-export default connect()(Login);
+const mapDispatchToProp = (dispatch) => ({
+  setUser: (user) => dispatch(userActions.setUser(user))
+})
+
+export default connect(null, mapDispatchToProp)(Login);
