@@ -52,7 +52,7 @@ function Login() {
         alert('Algo deu errado.');
       }
     } catch (err) {
-      alert('Email invalido.');
+      alert(err);
     }
   };
 
