@@ -2,6 +2,7 @@ import React from 'react';
 import LoginForm from '../Login/LoginForm';
 import api from '../../services/api';
 import { useHistory } from 'react-router';
+import { connect } from 'react-redux';
 
 function Login() {
   const history = useHistory();
@@ -68,4 +69,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default connect()(Login);
