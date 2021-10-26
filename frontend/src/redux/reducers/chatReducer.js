@@ -20,6 +20,16 @@ const chatReducer = (state = INITIAL_STATE, action) => {
         ...state,
         dataBase: action.data,
       };
+    case 'SET_USER':
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          id: action.user.id,
+          avatar: action.user.avatar,
+          name: action.user.name,
+        },
+      };
     default:
       return state;
   }
