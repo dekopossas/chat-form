@@ -18,16 +18,30 @@
       "name": "lucas",
       "id": "lucas@minatelli.com",
       "password": "321321321"
+    },
+    {
+      "name": "deko",
+      "id": "andre@possas.com",
+      "password": "321321321"
     }
   ],
   "suport": [
     {
       "id": "1",
       "name": "lucas",
-      "chat":[
-        { "author": "andre", "payload": "Colé!"  },
-        { "author": "lucas", "payload": "tudo bem?"  },
-        { "author": "andre", "payload": "tudo!"  }
+      "chat": [
+        {
+          "author": "andre",
+          "payload": "Colé!"
+        },
+        {
+          "author": "lucas",
+          "payload": "tudo bem?"
+        },
+        {
+          "author": "andre",
+          "payload": "tudo!"
+        }
       ]
     },
     {
