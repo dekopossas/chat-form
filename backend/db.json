@@ -17,12 +17,14 @@
     {
       "name": "lucas",
       "id": "lucas@minatelli.com",
-      "password": "321321321"
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar1.png"
     },
     {
       "name": "deko",
       "id": "andre@possas.com",
-      "password": "321321321"
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar5.png"
     }
   ],
   "suport": [
