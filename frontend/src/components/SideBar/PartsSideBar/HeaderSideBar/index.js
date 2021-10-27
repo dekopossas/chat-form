@@ -1,5 +1,6 @@
 // Package
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Icons (não consegui usar os indos decidi não perder tempo aqui mais!)
 // import DonutLargeIcon from '@mui/icons-material/DonutLarge';
@@ -9,12 +10,13 @@ import React from 'react';
 // Styles
 import style from './style.module.scss';
 
-function HeaderSideBar() {
+function HeaderSideBar(prop) {
+  console.log(prop)
   return (
     <div className={style.header}>
       <img
         className={style.header_avatar}
-        src="/image/avatares/avatar3.png"
+        src={ prop.userLogged.avatar }
         alt="avatar"
       />
       <div className={style.header_buttons}>
@@ -35,4 +37,8 @@ function HeaderSideBar() {
   );
 }
 
-export default HeaderSideBar;
+const mapStateToProps = (state) => ({
+  userLogged: state.userReducer.userLogged,
+});
+
+export default connect(mapStateToProps)(HeaderSideBar);
