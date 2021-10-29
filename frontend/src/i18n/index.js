@@ -4,7 +4,7 @@ import PTBR from './locales/pt/pt-br.json';
 import ENUS from './locales/en/en-us.json';
 
 const resources = {
-  'pt-br': PTBR,
+  'pt-BR': PTBR,
   'en-us': ENUS,
 };
 
@@ -12,7 +12,7 @@ i18n.use(initReactI18next).init({
   resources,
   lng: navigator.language,
   interpolation: {
-    escape: false,
+    escapeValue: false,
   },
 });
 
