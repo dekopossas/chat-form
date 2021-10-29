@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
+import { useTranslation } from 'react-i18next';
 
 import './style.css';
 
@@ -10,6 +11,7 @@ function LoginForm({
   loginInitialValue,
   handleSubmitLogin,
 }) {
+  const { t } = useTranslation();
   const [left, setLeft] = useState(true);
 
   const validationsCreateAcc = yup.object().shape({
@@ -31,12 +33,12 @@ function LoginForm({
             <h2 className="title title-primary">Já tenho conta!</h2>
             <p className="description description-primary">Conecti-se aqui</p>
             <button type="button" className="btn btn-primary" onClick={() => setLeft(true)}>
-              Entrar
+              {t('Sign in')}
             </button>
           </div>
           <div className="second-column">
             <h2 className="title title-second">Crie sua Conta</h2>
-            <p className="description description-second">Continuar com:</p>
+            <p className="description description-second">{t('Sign in with:')}</p>
 
             <div className="social-media">
               <ul className="list-social-media">
