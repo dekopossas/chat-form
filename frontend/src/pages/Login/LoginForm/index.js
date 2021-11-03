@@ -59,7 +59,7 @@ function LoginForm({
                 </a>
               </ul>
             </div>
-            <p className="description description-second">Ou preencha os campos a baixo:</p>
+            <p className="description description-second">{t('Or fill in the fields below:')}</p>
             <Formik
               initialValues={createAccInitialValue}
               onSubmit={handleSubmitCreateAcc}
@@ -83,7 +83,7 @@ function LoginForm({
                 </label>
                 <ErrorMessage className="form_error" component="span" name="password" />
                 <button type="submit" className="btn btn-second">
-                  Cadastrar
+                  {t('Register')}
                 </button>
               </Form>
             </Formik>
@@ -91,16 +91,16 @@ function LoginForm({
         </div>
         <div className="content second-content">
           <div className="first-column">
-            <h2 className="title title-primary">Ainda não tenho conta?</h2>
-            <p className="description description-primary">Embarque nessa aventura de</p>
-            <p className="description description-primary">auto conhecimento com a gente</p>
+            <h2 className="title title-primary">{t("Don't have an account yet?")}</h2>
+            <p className="description description-primary">{t('Embark on this adventure of')}</p>
+            <p className="description description-primary">{t('self-knowledge with us')}</p>
             <button type="button" className="btn btn-primary" onClick={() => setLeft(false)}>
-              Cadastro
+              {t('Register')}
             </button>
           </div>
           <div className="second-column">
-            <h2 className="title title-second">Entrar</h2>
-            <p className="description description-second">Continuar com:</p>
+            <h2 className="title title-second">{t('Sign in')}</h2>
+            <p className="description description-second">{t('Sign in with:')}</p>
             <div className="social-media">
               <ul className="list-social-media">
                 <a className="link-social-media" href="#">
@@ -138,10 +138,10 @@ function LoginForm({
                 </label>
                 <ErrorMessage className="form_error" component="span" name="password" />
                 <a className="password" href="#">
-                  Esqueceu sua senha?
+                  {t('Forgot your password?')}
                 </a>
                 <button type="submit" className="btn btn-second">
-                  Entrar
+                  {t('Sign in')}
                 </button>
               </Form>
             </Formik>
