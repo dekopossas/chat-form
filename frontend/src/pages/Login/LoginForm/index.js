@@ -30,14 +30,14 @@ function LoginForm({
       <div className="container">
         <div className="content first-content">
           <div className="first-column">
-            <h2 className="title title-primary">Já tenho conta!</h2>
+            <h2 className="title title-primary">{t('I already have an account!')}]</h2>
             <p className="description description-primary">{t('log in here')}</p>
             <button type="button" className="btn btn-primary" onClick={() => setLeft(true)}>
               {t('Sign in')}
             </button>
           </div>
           <div className="second-column">
-            <h2 className="title title-second">Crie sua Conta</h2>
+            <h2 className="title title-second">{t('Create your account')}]</h2>
             <p className="description description-second">{t('Sign in with:')}</p>
 
             <div className="social-media">

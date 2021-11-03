@@ -2,6 +2,9 @@
   "translation": {
     "Sign in": "Sign in",
     "Sign in with:": "Sign in with:",
-    "log in here": "log in here"
+    "log in here": "log in here",
+    "I already have an account!": "I already have an account!",
+    "Create your account": "Create your account",
+    "Or fill in the fields below:": "Or fill in the fields below:"
   }
 }
