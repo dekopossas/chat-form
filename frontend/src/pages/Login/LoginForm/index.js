@@ -31,7 +31,7 @@ function LoginForm({
         <div className="content first-content">
           <div className="first-column">
             <h2 className="title title-primary">Já tenho conta!</h2>
-            <p className="description description-primary">Conecti-se aqui</p>
+            <p className="description description-primary">{t('log in here')}</p>
             <button type="button" className="btn btn-primary" onClick={() => setLeft(true)}>
               {t('Sign in')}
             </button>
