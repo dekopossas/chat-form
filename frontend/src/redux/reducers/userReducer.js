@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
   userLogged: {
     id: '',
-    avatar: '/image/avatares/avatar3.png',
+    avatar: '',
     name: '',
   },
 };
