@@ -1,20 +1,6 @@
 {
   "users": [
     {
-      "name": "André de Castro Possas",
-      "city": "Belo Horizonte",
-      "state": "Minas Gerais",
-      "birthday": "19/01/1991",
-      "id": "andrepossas@gmail.com"
-    },
-    {
-      "name": "Lucas Minatelli",
-      "state": "Minas Gerais",
-      "city": "Belo Horizonte",
-      "birthday": "05/07/1995",
-      "id": "lucasminatelli2@gmail.com"
-    },
-    {
       "name": "lucas",
       "id": "lucas@minatelli.com",
       "password": "321321321",
