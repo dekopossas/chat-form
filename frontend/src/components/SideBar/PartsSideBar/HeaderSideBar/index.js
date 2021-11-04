@@ -5,8 +5,13 @@ import { connect } from 'react-redux';
 // Styles
 import style from './style.module.scss';
 
+// API
+import api from '../../../../services/api'
+
 function HeaderSideBar(prop) {
-  console.log(prop);
+
+  
+
   return (
     <div className={style.header}>
       <img className={style.header_avatar} src={prop.userLogged.avatar} alt="avatar" />
