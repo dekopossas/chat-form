@@ -19,11 +19,29 @@
       "name": "lucas",
       "chat": [
         {
-          "author": "andre",
+          "author": "bot",
           "payload": "Colé!"
         },
         {
           "author": "lucas",
+          "payload": "tudo bem?"
+        },
+        {
+          "author": "bot",
+          "payload": "tudo!"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "André de Castro Possas",
+      "chat": [
+        {
+          "author": "andre",
+          "payload": "Colé!"
+        },
+        {
+          "author": "bot",
           "payload": "tudo bem?"
         },
         {
@@ -33,12 +51,22 @@
       ]
     },
     {
-      "id": "2",
-      "name": "André de Castro Possas"
-    },
-    {
       "id": "3",
-      "name": "Nicole Machado"
+      "name": "Nicole Machado",
+      "chat": [
+        {
+          "author": "bot",
+          "payload": "Colé!"
+        },
+        {
+          "author": "Nicole",
+          "payload": "tudo bem?"
+        },
+        {
+          "author": "bot",
+          "payload": "tudo!"
+        }
+      ]
     }
   ]
 }
