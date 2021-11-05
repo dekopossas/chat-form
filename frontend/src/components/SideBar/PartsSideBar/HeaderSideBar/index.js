@@ -12,7 +12,6 @@ function HeaderSideBar() {
   const suportTimeLine = {
     name: 'deko',
     id: 'andre@possas.com',
-    password: '321321321',
     avatar: '/image/avatares/avatar5.png',
   };
 
