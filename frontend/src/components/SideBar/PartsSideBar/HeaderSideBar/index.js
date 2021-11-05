@@ -6,16 +6,20 @@ import { connect } from 'react-redux';
 import style from './style.module.scss';
 
 // API
-import api from '../../../../services/api'
+import api from '../../../../services/api';
 
-function HeaderSideBar(prop) {
-
-  
+function HeaderSideBar() {
+  const suportTimeLine = {
+    name: 'deko',
+    id: 'andre@possas.com',
+    password: '321321321',
+    avatar: '/image/avatares/avatar5.png',
+  };
 
   return (
     <div className={style.header}>
-      <img className={style.header_avatar} src={prop.userLogged.avatar} alt="avatar" />
-      <h4>{prop.userLogged.name}</h4>
+      <img className={style.header_avatar} src={suportTimeLine.avatar} alt="avatar" />
+      <h4>{suportTimeLine.name}</h4>
       <div className={style.header_buttons}>
         <div className={style.header_icons}>
           <i class="fas fa-sync-alt" style={{ color: '#919191' }}></i>
