@@ -17,7 +17,7 @@ function ChatWindow({ userLogged }) {
   const [listMsg, setListMsg] = useState([
     { author: 1, body: 'Hello'},
     { author: 1, body: 'how are you?'},
-    { author: 2, body: 'im fine thx'},
+    { author: 'andre@possas.com', body: 'im fine thx'},
   ]);
 
   // reccing voice msg
