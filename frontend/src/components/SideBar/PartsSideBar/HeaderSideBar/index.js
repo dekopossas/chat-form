@@ -1,5 +1,6 @@
 // Package
 import React, { useState, useEffect, useCallback } from 'react';
+import { useHistory } from 'react-router';
 import { connect } from 'react-redux';
 
 // Styles
@@ -10,6 +11,7 @@ import api from '../../../../services/api';
 
 function HeaderSideBar(prop) {
   const [user, setUser] = useState();
+  const history = useHistory();
   // const user = {
   //   name: 'deko',
   //   id: 'andre@possas.com',
@@ -18,14 +20,17 @@ function HeaderSideBar(prop) {
 
   const loadData = useCallback(async () => {
     const response = await api.get('/users');
-    console.log(response.data);
+    console.log((response.data).find((user) => user.id === prop.userLogged.id));
     console.log(prop.userLogged);
     setUser(response.data);
   }, [prop.userLogged]);
 
   useEffect(() => {
+    if(!prop.userLogged){
+      history.push('/')
+    }
     loadData();
-  }, [loadData]);
+  }, [history, loadData, prop.userLogged]);
 
   return (
     <div className={style.header}>
