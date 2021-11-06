@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 import { connect } from 'react-redux';
 import * as userActions from '../../redux/actions/userActions'
 
-function Login(prop) {
+function Login() {
   const history = useHistory();
 
   // ----------------------------------------------------------------
@@ -46,7 +46,9 @@ function Login(prop) {
       if (response.status === 200) {
         if (response.data.password === values.password) {
           alert('Logando');
-          prop.setUser(response.data);
+          localStorage.setItem('player', JSON.stringify({
+            ...response.user,
+            token: response.token }));
           history.push('/suport')
         } else{
           alert('Senha Incorreta.')
