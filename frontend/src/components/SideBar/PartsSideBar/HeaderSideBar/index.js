@@ -1,5 +1,5 @@
 // Package
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 
 // Styles
@@ -16,16 +16,16 @@ function HeaderSideBar(prop) {
   //   avatar: '/image/avatares/avatar5.png',
   // };
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     const response = await api.get('/users');
     console.log(response.data);
-    console.log(prop.userLogged)
+    console.log(prop.userLogged);
     setUser(response.data);
-  };
+  }, [prop.userLogged]);
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [loadData]);
 
   return (
     <div className={style.header}>
