@@ -1,11 +1,19 @@
 // Package
-import React from 'react';
+import React, { useEffect } from 'react';
+import * as userActions from '../../redux/actions/userActions'
 import { connect } from 'react-redux';
 
 // Styles
 import style from './style.module.scss';
 
 function HeaderSideBar(prop) {
+  const player = JSON.parse(localStorage.getItem('player'));
+
+
+  useEffect(() => {
+    prop.setUser(player);
+  }, [player, prop]);
+
   return (
     <div className={style.header}>
       <img className={style.header_avatar} src={prop.userLogged.avatar} alt="avatar" />
@@ -29,4 +37,8 @@ const mapStateToProps = (state) => ({
   userLogged: state.userReducer.userLogged,
 });
 
-export default connect(mapStateToProps)(HeaderSideBar);
+const mapDispatchToProp = (dispatch) => ({
+  setUser: (user) => dispatch(userActions.setUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProp)(HeaderSideBar);
