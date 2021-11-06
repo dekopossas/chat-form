@@ -1,6 +1,8 @@
 const INITIAL_STATE = {
   userLogged: {
     id: '',
+    avatar: '',
+    name: '',
   },
 };
 
@@ -12,6 +14,8 @@ const userReducer = (state = INITIAL_STATE, action) => {
         userLogged: {
           ...state.userLogged,
           id: action.user.id,
+          avatar: action.user.avatar,
+          name: action.user.name,
         },
       };
     default:
