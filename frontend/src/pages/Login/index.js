@@ -46,7 +46,7 @@ function Login(prop) {
       if (response.status === 200) {
         if (response.data.password === values.password) {
           alert('Logando');
-          prop.setUser(values);
+          prop.setUser(response.data);
           history.push('/suport')
         } else{
           alert('Senha Incorreta.')
