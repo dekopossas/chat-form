@@ -4,6 +4,7 @@ import style from './style.module.scss';
 import { connect } from 'react-redux';
 import api from '../../../../services/api';
 import * as ChatAction from '../../../../redux/actions/chatAction';
+import './style.css';
 
 function ChatListSideBar(prop) {
   const [data, setData] = useState();
@@ -18,19 +19,21 @@ function ChatListSideBar(prop) {
   }, []);
 
   return (
-    <div className={style.chatList}>
-      {data ? (
-        data.map((contact, key) => (
-          <ChatListItem
-            key={key}
-            data={contact}
-            active={contact.name === prop.person.name}
-            onClick={() => prop.selectChat(contact)}
-          />
-        ))
-      ) : (
-        <h1>Loading...</h1>
-      )}
+    <div className="chatLists">
+      <div className={style.chatList}>
+        {data ? (
+          data.map((contact, key) => (
+            <ChatListItem
+              key={key}
+              data={contact}
+              active={contact.name === prop.person.name}
+              onClick={() => prop.selectChat(contact)}
+            />
+          ))
+        ) : (
+          <h1>Loading...</h1>
+        )}
+      </div>
     </div>
   );
 }
