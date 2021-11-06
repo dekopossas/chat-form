@@ -46,9 +46,7 @@ function Login() {
       if (response.status === 200) {
         if (response.data.password === values.password) {
           alert('Logando');
-          localStorage.setItem('player', JSON.stringify({
-            ...response.user,
-            token: response.token }));
+          localStorage.setItem('player', JSON.stringify(response.data));
           history.push('/suport')
         } else{
           alert('Senha Incorreta.')
