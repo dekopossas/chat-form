@@ -10,6 +10,9 @@ function NewSuport() {
         </div>
         <div className={style.newChatHeadTitle}>Novo Atendimento</div>
       </div>
+      <div className={style.newChatList}>
+
+      </div>
     </div>
   );
 }
