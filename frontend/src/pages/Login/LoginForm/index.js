@@ -42,17 +42,17 @@ function LoginForm({
 
             <div className="social-media">
               <ul className="list-social-media">
-                <a className="link-social-media" href="#">
+                <a className="link-social-media" href="/">
                   <li className="item-social-media">
                     <i className="fab fa-facebook-f"></i>
                   </li>
                 </a>
-                <a className="link-social-media" href="#">
+                <a className="link-social-media" href="/">
                   <li className="item-social-media">
                     <i className="fab fa-google-plus-g"></i>
                   </li>
                 </a>
-                <a className="link-social-media" href="#">
+                <a className="link-social-media" href="/">
                   <li className="item-social-media">
                     <i className="fab fa-linkedin-in"></i>
                   </li>
@@ -66,18 +66,18 @@ function LoginForm({
               validationSchema={validationsCreateAcc}
             >
               <Form className="form">
-                <label className="label-input" for="name">
+                <label className="label-input" htmlFor="name">
                   <i className="far fa-user icon-modify"></i>
                   <Field type="text" name="name" placeholder="Escreva seu nome ^^" />
                 </label>
                 <ErrorMessage className="form_error" component="span" name="name" />
 
-                <label className="label-input" for="id">
+                <label className="label-input" htmlFor="id">
                   <i className="far fa-envelope icon-modify"></i>
                   <Field type="email" name="id" placeholder="Aqui seu Email" />
                 </label>
                 <ErrorMessage className="form_error" component="span" name="id" />
-                <label className="label-input" for="password">
+                <label className="label-input" htmlFor="password">
                   <i className="fas fa-lock icon-modify"></i>
                   <Field type="password" name="password" placeholder="Crie uma senha.." />
                 </label>
@@ -103,17 +103,17 @@ function LoginForm({
             <p className="description description-second">{t('Sign in with:')}</p>
             <div className="social-media">
               <ul className="list-social-media">
-                <a className="link-social-media" href="#">
+                <a className="link-social-media" href="/">
                   <li className="item-social-media">
                     <i className="fab fa-facebook-f"></i>
                   </li>
                 </a>
-                <a className="link-social-media" href="#">
+                <a className="link-social-media" href="/">
                   <li className="item-social-media">
                     <i className="fab fa-google-plus-g"></i>
                   </li>
                 </a>
-                <a className="link-social-media" href="#">
+                <a className="link-social-media" href="/">
                   <li className="item-social-media">
                     <i className="fab fa-linkedin-in"></i>
                   </li>
@@ -127,17 +127,17 @@ function LoginForm({
               validationSchema={validationsLogin}
             >
               <Form className="form">
-                <label className="label-input" for="id">
+                <label className="label-input" htmlFor="id">
                   <i className="far fa-envelope icon-modify"></i>
                   <Field type="email" name="id" placeholder="Email" />
                 </label>
                 <ErrorMessage className="form_error" component="span" name="id" />
-                <label className="label-input" for="password">
+                <label className="label-input" htmlFor="password">
                   <i className="fas fa-lock icon-modify"></i>
                   <Field type="password" name="password" placeholder="Password" />
                 </label>
                 <ErrorMessage className="form_error" component="span" name="password" />
-                <a className="password" href="#">
+                <a className="password" href="/">
                   {t('Forgot your password?')}
                 </a>
                 <button type="submit" className="btn btn-second">

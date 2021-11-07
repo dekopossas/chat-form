@@ -15,13 +15,13 @@ function HeaderSideBar() {
       <h4>{player.name}</h4>
       <div className={style.header_buttons}>
         <div className={style.header_icons}>
-          <i class="fas fa-sync-alt" style={{ color: '#919191' }}></i>
+          <i className="fas fa-sync-alt" style={{ color: '#919191' }}></i>
         </div>
         <div className={style.header_icons}>
-          <i class="fas fa-comments" style={{ color: '#919191' }}></i>
+          <i className="fas fa-comments" style={{ color: '#919191' }}></i>
         </div>
         <div className={style.header_icons}>
-          <i class="fas fa-list-ul" style={{ color: '#919191' }}></i>
+          <i className="fas fa-list-ul" style={{ color: '#919191' }}></i>
         </div>
       </div>
     </div>

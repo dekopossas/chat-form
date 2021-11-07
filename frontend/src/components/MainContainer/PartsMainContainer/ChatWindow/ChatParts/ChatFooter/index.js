@@ -20,7 +20,7 @@ function ChatFooter({
     <div className={style.chatFooter}>
       <div className={style.chatPre}>
         <div className={style.btn} onClick={handleCloseEmoji} style={{ width: emojiOpem ? 40 : 0 }}>
-          <i class="far fa-window-close" style={{ color: '#919191' }}></i>
+          <i className="far fa-window-close" style={{ color: '#919191' }}></i>
           {/* <CloseIcon style={{color: '#919191'}}/> */}
         </div>
         <div
@@ -28,7 +28,7 @@ function ChatFooter({
           onClick={handleOpemEmoji}
           style={{ color: emojiOpem ? '#009688' : '#919191' }}
         >
-          <i class="far fa-smile-wink"></i>
+          <i className="far fa-smile-wink"></i>
           {/* <InsertEmoticonIcon style={{color: '#919191'}}/> */}
         </div>
       </div>
@@ -48,13 +48,13 @@ function ChatFooter({
             style={{ color: listening ? '#126ece' : '#919191' }}
             onClick={handleMicClick}
           >
-            <i class="fas fa-microphone-alt"></i>
+            <i className="fas fa-microphone-alt"></i>
             {/* <MicIcon style={{color: '#919191'}}/> */}
           </div>
         )}
         {text !== '' && (
           <div className={style.btn} onClick={handleSendClick}>
-            <i class="far fa-paper-plane" style={{ color: '#919191' }}></i>
+            <i className="far fa-paper-plane" style={{ color: '#919191' }}></i>
             {/* <SendIcon style={{color: '#919191'}}/> */}
           </div>
         )}

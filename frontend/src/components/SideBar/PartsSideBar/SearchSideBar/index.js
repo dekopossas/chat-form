@@ -9,7 +9,7 @@ function SearchSideBar() {
     <div className={style.search}>
       <div className={style.search_input}>
         <div className={style.search_icons}>
-        <i class="fas fa-search-plus" style={{color: '#919191'}} ></i>
+        <i className="fas fa-search-plus" style={{color: '#919191'}} ></i>
           {/* <SearchIcon fontSize="small" style={{color: '#919191'}} /> */}
         </div>
         <input type="search" placeholder="Procurar ou começar uma nova conversa" />
