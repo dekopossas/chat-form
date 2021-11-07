@@ -1,11 +1,16 @@
 import React from 'react';
 import style from './style.module.scss';
 
-function NewSuport() {
+function NewSuport({ show, setShow }) {
+
+  const handleClose= () => {
+    setShow(false);
+  }
+
   return (
-    <div className={style.newChat}>
+    <div className={style.newChat} style={{ left: show ? 0 : -415 }}>
       <div className={style.newChatHeader}>
-        <div className={style.newChatBackButton}>
+        <div className={style.newChatBackButton} onClick={handleClose}>
           <i className="fas fa-arrow-left" style={{ color: '#FFF' }} />
         </div>
         <div className={style.newChatHeadTitle}>Novo Atendimento</div>
