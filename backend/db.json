@@ -20,15 +20,15 @@
       "chat": [
         {
           "author": "bot",
-          "payload": "Colé!"
+          "body": "Colé!"
         },
         {
           "author": "lucas",
-          "payload": "tudo bem?"
+          "body": "tudo bem?"
         },
         {
           "author": "bot",
-          "payload": "tudo!"
+          "body": "tudo!"
         }
       ]
     },
@@ -38,15 +38,15 @@
       "chat": [
         {
           "author": "andre",
-          "payload": "Colé!"
+          "body": "Colé!"
         },
         {
           "author": "bot",
-          "payload": "tudo bem?"
+          "body": "tudo bem?"
         },
         {
           "author": "andre",
-          "payload": "tudo!"
+          "body": "tudo!"
         }
       ]
     },
@@ -56,15 +56,15 @@
       "chat": [
         {
           "author": "bot",
-          "payload": "Colé!"
+          "body": "Colé!"
         },
         {
           "author": "Nicole",
-          "payload": "tudo bem?"
+          "body": "tudo bem?"
         },
         {
           "author": "bot",
-          "payload": "tudo!"
+          "body": "tudo!"
         }
       ]
     }
