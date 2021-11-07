@@ -1,5 +1,5 @@
 // Package
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import style from './style.module.scss';
 
@@ -10,7 +10,6 @@ import ChatFooter from './ChatParts/ChatFooter';
 import EmojiArea from './ChatParts/EmojiArea';
 
 function ChatWindow({ userLogged }) {
-  const body = useRef();
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [user, setUser] = useState({})
   const [text, setText] = useState('');
@@ -81,16 +80,16 @@ function ChatWindow({ userLogged }) {
     setEmojiOpem(false);
   };
 
-  useEffect(() => {
-    if(body.current.scrollHeight > body.current.offsetHeight) {
-      body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight;
-    }
-  }, [listMsg])
+  // useEffect(() => {
+  //   if(body.current.scrollHeight > body.current.offsetHeight) {
+  //     body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight;
+  //   }
+  // }, [listMsg])
 
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={listMsg} ref={body} />
+      <ChatBody listMsg={listMsg} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
