@@ -2,10 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 
 function NewSuport({ show, setShow }) {
-
-  const handleClose= () => {
-    setShow(false);
-  }
+  const handleClose = () => setShow(false);
 
   return (
     <div className={style.newChat} style={{ left: show ? 0 : -415 }}>

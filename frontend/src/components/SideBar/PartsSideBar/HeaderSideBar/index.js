@@ -6,8 +6,10 @@ import { connect } from 'react-redux';
 // Styles
 import style from './style.module.scss';
 
-function HeaderSideBar() {
+function HeaderSideBar({ setShow }) {
   const player = JSON.parse(localStorage.getItem('player'));
+
+  const opemNewSuport = () => setShow(true);
 
   return (
     <div className={style.header}>
@@ -17,7 +19,7 @@ function HeaderSideBar() {
         <div className={style.header_icons}>
           <i className="fas fa-sync-alt" style={{ color: '#919191' }}></i>
         </div>
-        <div className={style.header_icons}>
+        <div className={style.header_icons} onClick={opemNewSuport}>
           <i className="fas fa-comments" style={{ color: '#919191' }}></i>
         </div>
         <div className={style.header_icons}>

@@ -10,7 +10,7 @@ function SideBar() {
   return (
     <div className={style.sidebar}>
       <NewSuport show={showNewSuport} setShow={setShowNewSuport} />
-      <HeaderSideBar setShowNewSuport={setShowNewSuport} />
+      <HeaderSideBar setShow={setShowNewSuport} />
       <SearchSideBar />
       <ChatListSideBar />
     </div>
