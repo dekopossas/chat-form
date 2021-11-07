@@ -9,7 +9,7 @@ function SideBar() {
   const [showNewSuport, setShowNewSuport] = useState('false');
   return (
     <div className={style.sidebar}>
-      <NewSuport showNewSuport={showNewSuport} setShowNewSuport={setShowNewSuport} />
+      <NewSuport show={showNewSuport} setShow={setShowNewSuport} />
       <HeaderSideBar setShowNewSuport={setShowNewSuport} />
       <SearchSideBar />
       <ChatListSideBar />
