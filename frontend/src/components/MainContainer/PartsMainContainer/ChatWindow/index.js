@@ -80,12 +80,6 @@ function ChatWindow({ userLogged }) {
     setEmojiOpem(false);
   };
 
-  // useEffect(() => {
-  //   if(body.current.scrollHeight > body.current.offsetHeight) {
-  //     body.current.scrollTop = body.current.scrollHeight - body.current.offsetHeight;
-  //   }
-  // }, [listMsg])
-
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
