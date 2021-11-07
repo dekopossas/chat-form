@@ -5,7 +5,9 @@ function NewSuport() {
   return (
     <div className={style.newChat}>
       <div className={style.newChatHeader}>
-        <div className={style.newChatBackButton}></div>
+        <div className={style.newChatBackButton}>
+          <i class="fas fa-arrow-left" style={{ color: '#FFF' }} />
+        </div>
         <div className={style.newChatHeadTitle}>Novo Atendimento</div>
       </div>
     </div>
