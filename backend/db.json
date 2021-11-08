@@ -16,7 +16,8 @@
   "suport": [
     {
       "id": "1",
-      "name": "lucas",
+      "name": "Lucas Minatelli",
+      "avatar": "/image/avatares/avatar2.png",
       "chat": [
         {
           "author": "bot",
@@ -35,6 +36,7 @@
     {
       "id": "2",
       "name": "André de Castro Possas",
+      "avatar": "/image/avatares/avatar3.png",
       "chat": [
         {
           "author": "andre",
@@ -53,6 +55,7 @@
     {
       "id": "3",
       "name": "Nicole Machado",
+      "avatar": "/image/avatares/avatar1.png",
       "chat": [
         {
           "author": "bot",
