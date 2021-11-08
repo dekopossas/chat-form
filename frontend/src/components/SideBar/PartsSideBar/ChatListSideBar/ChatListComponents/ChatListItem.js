@@ -21,7 +21,8 @@ function ChatListItem({ onClick, active, data, avatar, lastMsg }) {
         </div>
         <div className={style.chatList_line}>
           <div className={style.chatList_lastMsg}>
-            <p>{lastMsg}</p>
+            <p>Ultima msg provizoria</p>
+            {/* <p>{lastMsg}</p> */}
           </div>
         </div>
       </div>
