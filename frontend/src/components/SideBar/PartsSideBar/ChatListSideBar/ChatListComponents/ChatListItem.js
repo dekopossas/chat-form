@@ -1,11 +1,11 @@
 import React from 'react';
 import style from './style.module.scss';
-import moment from 'moment';
+// import moment from 'moment';
 
 function ChatListItem({ onClick, active, data, avatar, lastMsg }) {
-  const formateDate = (date) => {
-    return moment(date).format('DD/MM');
-  };
+  // const formateDate = (date) => {
+  //   return moment(date).format('DD/MM');
+  // };
 
   return (
     <div onClick={onClick} className={active ? style.chatListItemactive : style.chatListItem}>
