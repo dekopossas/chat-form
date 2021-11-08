@@ -1,13 +1,11 @@
 // Package
 import React from 'react';
 import style from './style.module.scss';
+import { connect } from 'react-redux';
 
-// Ícons (mais uma vez icons q não consigo usar)
-// import SearchIcon from '@mui/icons-material/Search';
-// import AttachFileIcon from '@mui/icons-material/AttachFile';
-// import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-
-function ChatHeader() {
+function ChatHeader(prop) {
+  console.log(prop);
+  
   return (
     <div className={style.chatHeader}>
       <div className={style.chatInfo}>
@@ -16,20 +14,21 @@ function ChatHeader() {
       </div>
       <div className={style.header_buttons}>
         <div className={style.btn}>
-        <i className="fas fa-search-plus" style={{color: '#919191'}} ></i>
-          {/* <SearchIcon style={{color: '#919191'}}/> */}
+          <i className="fas fa-search-plus" style={{ color: '#919191' }}></i>
         </div>
         <div className={style.btn}>
-        <i className="fas fa-paperclip" style={{color: '#919191'}} ></i>
-          {/* <AttachFileIcon style={{color: '#919191'}}/> */}
+          <i className="fas fa-paperclip" style={{ color: '#919191' }}></i>
         </div>
         <div className={style.btn}>
-        <i className="fas fa-list-ul" style={{color: '#919191'}} ></i>
-          {/* <MoreHorizIcon style={{color: '#919191'}}/> */}
+          <i className="fas fa-list-ul" style={{ color: '#919191' }}></i>
         </div>
       </div>
     </div>
   );
 }
 
-export default ChatHeader;
+const mapStateToProps = (state) => ({
+  person: state.chatReducer.selectedPerson,
+});
+
+export default connect(mapStateToProps)(ChatHeader);

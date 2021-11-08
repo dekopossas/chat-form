@@ -11,39 +11,9 @@ import EmojiArea from './ChatParts/EmojiArea';
 
 function ChatWindow({ userLogged }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
-  const [user, setUser] = useState({})
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
-  const [listMsg, setListMsg] = useState([
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-    { author: 1, body: 'Hello'},
-    { author: 1, body: 'how are you?'},
-    { author: 'andre@possas.com', body: 'im fine thx'},
-
-  ]);
+  const [listMsg, setListMsg] = useState([]);
 
   // reccing voice msg
   let recognition = null;
