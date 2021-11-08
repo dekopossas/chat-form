@@ -26,6 +26,7 @@ function ChatListSideBar(prop) {
             <ChatListItem
               key={key}
               data={contact}
+              avatar={contact.avatar}
               active={contact.name === prop.person.name}
               onClick={() => prop.selectChat(contact)}
             />

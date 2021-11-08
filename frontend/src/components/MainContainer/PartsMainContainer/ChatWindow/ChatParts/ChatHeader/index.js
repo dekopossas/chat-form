@@ -4,13 +4,11 @@ import style from './style.module.scss';
 import { connect } from 'react-redux';
 
 function ChatHeader(prop) {
-  console.log(prop);
-  
   return (
     <div className={style.chatHeader}>
       <div className={style.chatInfo}>
-        <img src="/image/avatares/avatar1.png" alt="" className={style.avatar} />
-        <div className={style.name}>André Possas</div>
+        <img src={prop.person.avatar} alt="avatar" className={style.avatar} />
+        <div className={style.name}>{prop.person.name}</div>
       </div>
       <div className={style.header_buttons}>
         <div className={style.btn}>
