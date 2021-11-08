@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 import moment from 'moment';
 
-function ChatListItem({ onClick, active, data, avatar }) {
+function ChatListItem({ onClick, active, data, avatar, lastMsg }) {
   const formateDate = (date) => {
     return moment(date).format('DD/MM');
   };
@@ -21,7 +21,7 @@ function ChatListItem({ onClick, active, data, avatar }) {
         </div>
         <div className={style.chatList_line}>
           <div className={style.chatList_lastMsg}>
-            <p>Olá, Tudo bem?</p>
+            <p>{lastMsg}</p>
           </div>
         </div>
       </div>
