@@ -38,7 +38,7 @@ function ChatWindow({ userLogged }) {
 
   const handleSendClick = () => {};
 
-  const handleEmojiClick = (e, emojiObj) => {
+  const handleEmojiClick = (_e, emojiObj) => {
     setText(text + emojiObj.emoji);
   };
 
