@@ -1,5 +1,5 @@
 // Package
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import style from './style.module.scss';
 
@@ -8,6 +8,8 @@ import ChatHeader from './ChatParts/ChatHeader';
 import ChatBody from './ChatParts/ChatBody';
 import ChatFooter from './ChatParts/ChatFooter';
 import EmojiArea from './ChatParts/EmojiArea';
+
+import api from '../../../../services/api'
 
 function ChatWindow({ userLogged }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
@@ -36,7 +38,9 @@ function ChatWindow({ userLogged }) {
     }
   };
 
-  const handleSendClick = () => {};
+  const handleSendClick = () => {
+    
+  };
 
   const handleEmojiClick = (_e, emojiObj) => {
     setText(text + emojiObj.emoji);
@@ -49,6 +53,15 @@ function ChatWindow({ userLogged }) {
   const handleCloseEmoji = () => {
     setEmojiOpem(false);
   };
+
+  const loadData = async () => {
+    const response = await api.get('/suport');
+    setListMsg(response.data);
+  };
+
+  useEffect(() => {
+
+  }, []);
 
   return (
     <div className={style.chatWindow}>
