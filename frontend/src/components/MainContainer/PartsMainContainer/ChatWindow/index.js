@@ -66,7 +66,7 @@ function ChatWindow({ userLogged }) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={suportData} />
+      <ChatBody listMsg={suportData[1].chat} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
@@ -78,6 +78,7 @@ function ChatWindow({ userLogged }) {
         handleMicClick={handleMicClick}
         listening={listening}
       />
+      <button onClick={() => console.log(suportData)}>butoba</button>
     </div>
   );
 }
