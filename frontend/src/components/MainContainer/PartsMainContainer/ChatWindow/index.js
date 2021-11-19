@@ -15,7 +15,7 @@ function ChatWindow({ userLogged }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
-  const [listMsg, setListMsg] = useState([]);
+  const [suportData, setSuportData] = useState([]);
 
   // reccing voice msg
   let recognition = null;
@@ -56,17 +56,17 @@ function ChatWindow({ userLogged }) {
 
   const loadData = async () => {
     const response = await api.get('/suport');
-    setListMsg(response.data);
+    setSuportData(response.data);
   };
 
   useEffect(() => {
-
+    loadData()
   }, []);
 
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={listMsg} />
+      <ChatBody listMsg={suportData} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
