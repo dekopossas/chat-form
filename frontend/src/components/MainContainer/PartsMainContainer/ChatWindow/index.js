@@ -11,7 +11,7 @@ import EmojiArea from './ChatParts/EmojiArea';
 
 import api from '../../../../services/api'
 
-function ChatWindow({ userLogged }) {
+function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
@@ -66,7 +66,7 @@ function ChatWindow({ userLogged }) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={suportData[1]?.chat} />
+      <ChatBody listMsg={suportData[person.id - 1]?.chat} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
@@ -78,13 +78,13 @@ function ChatWindow({ userLogged }) {
         handleMicClick={handleMicClick}
         listening={listening}
       />
-      <button onClick={() => console.log(suportData)}>butoba</button>
+      <button onClick={() => console.log(person.id)}>butoba</button>
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  userLogged: state.userReducer.userLogged,
+  person: state.chatReducer.selectedPerson,
 });
 
 export default connect(mapStateToProps)(ChatWindow);
