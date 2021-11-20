@@ -78,7 +78,6 @@ function ChatWindow({ person }) {
         handleMicClick={handleMicClick}
         listening={listening}
       />
-      <button onClick={() => console.log(person.id)}>butoba</button>
     </div>
   );
 }
