@@ -66,7 +66,7 @@ function ChatWindow({ userLogged }) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={suportData[1].chat} />
+      <ChatBody listMsg={suportData[1]?.chat} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}

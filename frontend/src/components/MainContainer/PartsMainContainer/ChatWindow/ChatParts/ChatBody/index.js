@@ -8,7 +8,7 @@ function ChatBody({ listMsg }) {
 
   return (
     <ScrollableFeed className={style.chatBody}>
-      {listMsg.map((item, key) => (
+      {listMsg?.map((item, key) => (
         <MenssageItem key={key} data={item} player={player} />
       ))}
     </ScrollableFeed>
