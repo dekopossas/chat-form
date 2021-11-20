@@ -3,11 +3,9 @@ import style from './style.module.scss';
 
 import { useTranslation } from 'react-i18next';
 
-
-function NewSuport({ show, setShow }) {
+function NewSuport({ show, setShow, handleNewChat }) {
   const handleClose = () => setShow(false);
   const { t } = useTranslation();
-
 
   return (
     <div className={style.newChat} style={{ left: show ? 0 : -415 }}>
@@ -20,7 +18,9 @@ function NewSuport({ show, setShow }) {
       <div className={style.newChatList}>
         <div className={style.newChatItem}>
           <img className={style.newChatItemAvatar} src="/image/avatares/plus.png" alt="newchat" />
-          <div className={style.newChatItemName}>{t('Do you want to start a new service?')}</div>
+          <div className={style.newChatItemName} onClick={handleNewChat}>
+            {t('Do you want to start a new service?')}
+          </div>
         </div>
       </div>
     </div>
