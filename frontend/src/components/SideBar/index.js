@@ -11,7 +11,7 @@ import NewSuport from './PartsSideBar/NewSuport';
 import style from './style.module.scss';
 
 // API
-import api from '../../../../services/api';
+import api from '../../services/api';
 
 
 function SideBar() {
