@@ -1,8 +1,13 @@
+// Package
 import React, { useState } from 'react';
+
+// Components
 import ChatListSideBar from './PartsSideBar/ChatListSideBar';
 import HeaderSideBar from './PartsSideBar/HeaderSideBar';
 import SearchSideBar from './PartsSideBar/SearchSideBar';
 import NewSuport from './PartsSideBar/NewSuport';
+
+// Styles
 import style from './style.module.scss';
 
 function SideBar() {
