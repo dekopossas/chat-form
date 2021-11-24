@@ -29,11 +29,16 @@ function SideBar() {
     });
   };
 
-  const fetchNewChat = async () => {
+  const fetchCreateNewChat = async () => {
+    const player = JSON.parse(localStorage.getItem('player'));
+    updateModel(player);
     const response = await api.post('/suport', model);
+    console.log(response);
   };
 
-  const handleNewChat = () => {};
+  const handleNewChat = () => {
+    fetchCreateNewChat();
+  };
 
   const [showNewSuport, setShowNewSuport] = useState(false);
   return (
