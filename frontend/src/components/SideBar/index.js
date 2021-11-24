@@ -1,5 +1,6 @@
 // Package
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Redirect } from 'react-router';
 
 // Components
 import ChatListSideBar from './PartsSideBar/ChatListSideBar';
@@ -14,12 +15,7 @@ import style from './style.module.scss';
 import api from '../../services/api';
 
 function SideBar() {
-  const player = JSON.parse(localStorage.getItem('player'));
-
-  const model = {
-    name: player.name,
-    avatar: player.avatar,
-  };
+  const [showNewSuport, setShowNewSuport] = useState(false);
 
   const fetchCreateNewChat = async () => {
     const response = await api.post('/suport', model);
@@ -32,7 +28,14 @@ function SideBar() {
     fetchCreateNewChat();
   };
 
-  const [showNewSuport, setShowNewSuport] = useState(false);
+  const player = JSON.parse(localStorage.getItem('player'));
+  if (!player) return <Redirect to="/" />;
+
+  const model = {
+    name: player.name,
+    avatar: player.avatar,
+  };
+
   return (
     <div className={style.sidebar}>
       <NewSuport show={showNewSuport} setShow={setShowNewSuport} handleNewChat={handleNewChat} />

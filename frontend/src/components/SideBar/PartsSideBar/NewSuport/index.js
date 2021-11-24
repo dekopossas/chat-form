@@ -9,8 +9,7 @@ function NewSuport({ show, setShow, handleNewChat }) {
   const { t } = useTranslation();
   const player = JSON.parse(localStorage.getItem('player'));
 
-
-  if(!player) return <Redirect to="/" />
+  if (!player) return <Redirect to="/" />;
 
   return (
     <div className={style.newChat} style={{ left: show ? 0 : -415 }}>
