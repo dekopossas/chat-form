@@ -1,11 +1,16 @@
 import React from 'react';
 import style from './style.module.scss';
+import { Redirect } from 'react-router';
 
 import { useTranslation } from 'react-i18next';
 
 function NewSuport({ show, setShow, handleNewChat }) {
   const handleClose = () => setShow(false);
   const { t } = useTranslation();
+  const player = JSON.parse(localStorage.getItem('player'));
+
+
+  if(!player) return <Redirect to="/" />
 
   return (
     <div className={style.newChat} style={{ left: show ? 0 : -415 }}>
