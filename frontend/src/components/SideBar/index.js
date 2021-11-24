@@ -16,12 +16,12 @@ import api from '../../services/api';
 
 function SideBar() {
   const [newChat, setNewChat] = useState();
-  const model = {
+  const [model, setModel] = useState({
     name: '',
     avatar: '',
     chat: []
-  }
-
+  });
+  
   const fetchNewChat = async () => {
     const response = await api.post('/suport', model);
 
