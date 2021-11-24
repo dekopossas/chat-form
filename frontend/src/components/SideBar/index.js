@@ -1,5 +1,5 @@
 // Package
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Components
 import ChatListSideBar from './PartsSideBar/ChatListSideBar';
@@ -14,26 +14,18 @@ import style from './style.module.scss';
 import api from '../../services/api';
 
 function SideBar() {
-  const [newChat, setNewChat] = useState();
-  const [model, setModel] = useState({
-    name: '',
-    avatar: '',
-    chat: [],
-  });
+  const player = JSON.parse(localStorage.getItem('player'));
 
-  const updateModel = (localStorage) => {
-    setModel({
-      ...model,
-      name: localStorage.name,
-      avatar: localStorage.avatar,
-    });
+  const model = {
+    name: player.name,
+    avatar: player.avatar,
   };
 
   const fetchCreateNewChat = async () => {
-    const player = JSON.parse(localStorage.getItem('player'));
-    updateModel(player);
     const response = await api.post('/suport', model);
-    console.log(response);
+    if (response.status === 201) {
+      return window.location.reload();
+    }
   };
 
   const handleNewChat = () => {
@@ -46,7 +38,7 @@ function SideBar() {
       <NewSuport show={showNewSuport} setShow={setShowNewSuport} handleNewChat={handleNewChat} />
       <HeaderSideBar setShow={setShowNewSuport} />
       <SearchSideBar />
-      <ChatListSideBar newChat={newChat} />
+      <ChatListSideBar />
     </div>
   );
 }
