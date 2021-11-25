@@ -34,6 +34,7 @@ function SideBar() {
   const model = {
     name: player.name,
     avatar: player.avatar,
+    chat:[]
   };
 
   return (
