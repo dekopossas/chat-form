@@ -9,7 +9,7 @@ import ChatBody from './ChatParts/ChatBody';
 import ChatFooter from './ChatParts/ChatFooter';
 import EmojiArea from './ChatParts/EmojiArea';
 
-import api from '../../../../services/api'
+import api from '../../../../services/api';
 
 function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
@@ -38,9 +38,7 @@ function ChatWindow({ person }) {
     }
   };
 
-  const handleSendClick = () => {
-    
-  };
+  const handleSendClick = () => {};
 
   const handleEmojiClick = (_e, emojiObj) => {
     setText(text + emojiObj.emoji);
@@ -60,13 +58,13 @@ function ChatWindow({ person }) {
   };
 
   useEffect(() => {
-    loadData()
+    loadData();
   }, []);
 
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={suportData[person.id - 1]?.chat} />
+      <ChatBody listMsg={(suportData?.find(e => e.id === person.id).chat)} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
