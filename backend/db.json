@@ -70,6 +70,17 @@
           "body": "Dexincoxta!"
         }
       ]
+    },
+    {
+      "name": "deko",
+      "avatar": "/image/avatares/avatar5.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Olá deko, Como está se sentindo hoje?"
+        }
+      ],
+      "id": "HDEQBuj"
     }
   ]
 }
