@@ -34,7 +34,12 @@ function SideBar() {
   const model = {
     name: player.name,
     avatar: player.avatar,
-    chat: [],
+    chat: [
+      {
+        author: 'bot',
+        body: `Olá ${player.name}, Como está se sentindo hoje?`,
+      },
+    ],
   };
 
   return (
