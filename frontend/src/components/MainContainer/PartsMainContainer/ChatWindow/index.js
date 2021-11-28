@@ -64,7 +64,7 @@ function ChatWindow({ person }) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={(suportData?.find(e => e.id === person.id).chat)} />
+      <ChatBody listMsg={(suportData?.find(e => e.id === person.id)?.chat)} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
