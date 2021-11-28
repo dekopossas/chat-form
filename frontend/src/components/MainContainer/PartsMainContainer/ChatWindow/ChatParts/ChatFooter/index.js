@@ -1,11 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
 
-// import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
-// import CloseIcon from '@mui/icons-material/Close';
-// import SendIcon from '@mui/icons-material/Send';
-// import MicIcon from '@mui/icons-material/Mic';
-
 function ChatFooter({
   handleOpemEmoji,
   handleCloseEmoji,
@@ -21,7 +16,6 @@ function ChatFooter({
       <div className={style.chatPre}>
         <div className={style.btn} onClick={handleCloseEmoji} style={{ width: emojiOpem ? 40 : 0 }}>
           <i className="far fa-window-close" style={{ color: '#919191' }}></i>
-          {/* <CloseIcon style={{color: '#919191'}}/> */}
         </div>
         <div
           className={style.btn}
@@ -29,7 +23,6 @@ function ChatFooter({
           style={{ color: emojiOpem ? '#009688' : '#919191' }}
         >
           <i className="far fa-smile-wink"></i>
-          {/* <InsertEmoticonIcon style={{color: '#919191'}}/> */}
         </div>
       </div>
       <div className={style.chatInputArea}>
@@ -49,13 +42,11 @@ function ChatFooter({
             onClick={handleMicClick}
           >
             <i className="fas fa-microphone-alt"></i>
-            {/* <MicIcon style={{color: '#919191'}}/> */}
           </div>
         )}
         {text !== '' && (
           <div className={style.btn} onClick={handleSendClick}>
             <i className="far fa-paper-plane" style={{ color: '#919191' }}></i>
-            {/* <SendIcon style={{color: '#919191'}}/> */}
           </div>
         )}
       </div>
