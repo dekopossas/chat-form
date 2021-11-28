@@ -38,6 +38,11 @@ function ChatWindow({ person }) {
     }
   };
 
+  const msgSend = {
+    author: '',
+    body: '',
+  };
+
   const handleSendClick = () => {};
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -64,7 +69,7 @@ function ChatWindow({ person }) {
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={(suportData?.find(e => e.id === person.id)?.chat)} />
+      <ChatBody listMsg={suportData?.find((e) => e.id === person.id)?.chat} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
