@@ -41,6 +41,11 @@ function ChatWindow({ person }) {
       recognition.start();
     }
   };
+  
+  const fecthNewMsg = async(id) => {
+    const response = await api.put(`/suport/${id.id}`, );
+    console.log(response);
+  }
 
   const handleSendClick = () => {
     setMsgSend({
@@ -48,6 +53,7 @@ function ChatWindow({ person }) {
       author: person.name,
       body: text,
     });
+    fecthNewMsg(person);
     setText('');
   };
 
