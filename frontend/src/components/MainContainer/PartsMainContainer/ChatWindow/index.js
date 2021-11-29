@@ -20,6 +20,12 @@ function ChatWindow({ person }) {
     author: '',
     body: '',
   });
+  const [messageList, setMessageList] = useState([
+    {
+      author: "bot",
+      body: "Olá deko, Como está se sentindo hoje?"
+    }
+  ]);
 
   // reccing voice msg
   let recognition = null;
@@ -41,13 +47,14 @@ function ChatWindow({ person }) {
       recognition.start();
     }
   };
-  
-  const fecthNewMsg = async(id) => {
-    const response = await api.put(`/suport/${id.id}`, );
+
+  const fecthNewMsg = async (id) => {
+    const response = await api.put(`/suport/${id.id}`);
     console.log(response);
-  }
+  };
 
   const handleSendClick = () => {
+    setMessageList()
     setMsgSend({
       ...msgSend,
       author: person.name,
@@ -73,6 +80,7 @@ function ChatWindow({ person }) {
     const response = await api.get('/suport');
     setSuportData(response.data);
   };
+  console.log(suportData?.find((e) => e.id === person.id)?.chat)
 
   useEffect(() => {
     loadData();
