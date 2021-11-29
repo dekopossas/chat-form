@@ -16,6 +16,10 @@ function ChatWindow({ person }) {
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
   const [suportData, setSuportData] = useState([]);
+  const [msgSend, setMsgSend] = useState({
+    author: '',
+    body: '',
+  });
 
   // reccing voice msg
   let recognition = null;
@@ -38,12 +42,14 @@ function ChatWindow({ person }) {
     }
   };
 
-  const msgSend = {
-    author: '',
-    body: '',
+  const handleSendClick = () => {
+    setMsgSend({
+      ...msgSend,
+      author: person.name,
+      body: text,
+    });
+    setText('');
   };
-
-  const handleSendClick = () => {};
 
   const handleEmojiClick = (_e, emojiObj) => {
     setText(text + emojiObj.emoji);
