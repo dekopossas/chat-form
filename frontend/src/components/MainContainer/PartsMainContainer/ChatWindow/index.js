@@ -27,7 +27,10 @@ function ChatWindow({ person }) {
     },
   ]);
   const [payload, setPayload] = useState({
-    chat:[]
+    id: '',
+    name: '',
+    avatar: '',
+    chat: [],
   });
 
   // reccing voice msg
@@ -62,10 +65,10 @@ function ChatWindow({ person }) {
       author: person.name,
       body: text,
     });
-    console.log(messageList)
+    console.log(messageList);
     setMessageList([...messageList, msgSend]);
-    console.log(messageList)
-    setPayload({...payload, chat: messageList});
+    console.log(messageList);
+    setPayload({ ...payload, chat: messageList });
     // fecthNewMsg(person);
     setText('');
   };
