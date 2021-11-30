@@ -20,18 +20,18 @@ function ChatWindow({ person }) {
     author: '',
     body: '',
   });
-  const [messageList, setMessageList] = useState([
-    {
-      author: 'bot',
-      body: 'Olá deko, Como está se sentindo hoje?',
-    },
-  ]);
   const [payload, setPayload] = useState({
     id: '',
     name: '',
     avatar: '',
     chat: [],
   });
+  const [currentMsg, setCurrentMsg] = useState([
+    {
+      author: 'bot',
+      body: 'Olá deko, Como está se sentindo hoje?',
+    },
+  ]);
 
   // reccing voice msg
   let recognition = null;
@@ -54,23 +54,29 @@ function ChatWindow({ person }) {
     }
   };
 
-  // const fecthNewMsg = async (id) => {
-  //   const response = await api.put(`/suport/${id.id}`, payload);
-  //   console.log(response);
-  // };
+  const fecthNewMsg = async (id) => {
+    const response = await api.put(`/suport/${id.id}`, payload);
+    console.log(response);
+  };
 
   const handleSendClick = () => {
-    setMsgSend({
-      ...msgSend,
+    setMsgSend((prevMsgSend) => ({
+      ...prevMsgSend,
       author: person.name,
       body: text,
-    });
-    console.log(messageList);
-    setMessageList([...messageList, msgSend]);
-    console.log(messageList);
-    setPayload({ ...payload, chat: messageList });
-    // fecthNewMsg(person);
-    setText('');
+    }));
+
+    setCurrentMsg((prevCurrentmsd) => [...prevCurrentmsd, msgSend]);
+
+    setPayload((prevPayload) => ({
+      ...prevPayload,
+      id: person.id,
+      name: person.name,
+      avatar: person.avatar,
+      chat: currentMsg,
+    }));
+    console.log(msgSend);
+    // fecthNewMsg(person.id);
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -89,7 +95,16 @@ function ChatWindow({ person }) {
     const response = await api.get('/suport');
     setSuportData(response.data);
   };
-  console.log(suportData?.find((e) => e.id === person.id)?.chat);
+
+  // useCallback(() => {
+  //   setPayload({
+  //     ...payload,
+  //     id: person.id,
+  //     name: person.name,
+  //     avatar: person.avatar,
+  //     chat: suportData?.find((e) => e.id === person.id)?.chat,
+  //   })
+  // }, [payload, person.avatar, person.id, person.name, suportData]);
 
   useEffect(() => {
     loadData();
