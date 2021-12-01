@@ -84,17 +84,11 @@ function ChatWindow({ person }) {
     setEmojiOpem(false);
   };
 
-  const loadData = useCallback(() => {
-    async function fetchData() {
-      const response = await api.get('/suport');
-      if(response){
-        setSuportData(response.data);
-      }
-    }
-    fetchData()
-    setInitialMsg(suportData?.find((e) => e.id === person.id)?.chat);
-  }, [person.id, suportData]);
-
+  const loadData = () => {
+    const response = api.get('/suport');
+    setSuportData(response.data);
+  };
+  
   // useCallback(() => {
   //   setPayload({
   //     ...payload,
@@ -107,16 +101,16 @@ function ChatWindow({ person }) {
 
   useEffect(() => {
     loadData();
-  }, [loadData]);
+  }, []);
 
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
       <ChatBody listMsg={suportData?.find((e) => e.id === person.id)?.chat} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
-      <button type="button" onClick={() => console.log(msgSend)}>
+      {/* <button type="button" onClick={() => console.log(msgSend)}>
         butoba
-      </button>
+      </button> */}
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
