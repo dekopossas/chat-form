@@ -1,5 +1,5 @@
 // Package
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import style from './style.module.scss';
 
@@ -13,25 +13,20 @@ import api from '../../../../services/api';
 
 function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState(''); // texto do input
   const [listening, setListening] = useState(false);
   const [suportData, setSuportData] = useState([]);
   const [msgSend, setMsgSend] = useState({
+    // seto um obj de msg
     author: '',
     body: '',
   });
   const [payload, setPayload] = useState({
-    id: '',
     name: '',
     avatar: '',
     chat: [],
   });
-  const [currentMsg, setCurrentMsg] = useState([
-    {
-      author: 'bot',
-      body: 'Olá deko, Como está se sentindo hoje?',
-    },
-  ]);
+  const [initialMsg, setInitialMsg] = useState([]);
 
   // reccing voice msg
   let recognition = null;
@@ -60,22 +55,20 @@ function ChatWindow({ person }) {
   };
 
   const handleSendClick = () => {
-    setMsgSend((prevMsgSend) => ({
-      ...prevMsgSend,
+    const msg = {
       author: person.name,
       body: text,
-    }));
+    };
 
-    setCurrentMsg((prevCurrentmsd) => [...prevCurrentmsd, msgSend]);
+    setInitialMsg([...initialMsg, msg]);
 
-    setPayload((prevPayload) => ({
-      ...prevPayload,
-      id: person.id,
-      name: person.name,
-      avatar: person.avatar,
-      chat: currentMsg,
-    }));
-    console.log(msgSend);
+    // setPayload((prevPayload) => ({
+    //   ...prevPayload,
+    //   id: person.id,
+    //   name: person.name,
+    //   avatar: person.avatar,
+    //   chat: initialMsg,
+    // }));
     // fecthNewMsg(person.id);
   };
 
@@ -91,10 +84,16 @@ function ChatWindow({ person }) {
     setEmojiOpem(false);
   };
 
-  const loadData = async () => {
-    const response = await api.get('/suport');
-    setSuportData(response.data);
-  };
+  const loadData = useCallback(() => {
+    async function fetchData() {
+      const response = await api.get('/suport');
+      if(response){
+        setSuportData(response.data);
+      }
+    }
+    fetchData()
+    setInitialMsg(suportData?.find((e) => e.id === person.id)?.chat);
+  }, [person.id, suportData]);
 
   // useCallback(() => {
   //   setPayload({
@@ -108,20 +107,23 @@ function ChatWindow({ person }) {
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [loadData]);
 
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
       <ChatBody listMsg={suportData?.find((e) => e.id === person.id)?.chat} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
+      <button type="button" onClick={() => console.log(msgSend)}>
+        butoba
+      </button>
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
         emojiOpem={emojiOpem}
-        text={text}
+        author
         setText={setText}
-        handleSendClick={handleSendClick}
+        handleSendClick={handleSendClick} // função indo como prop de enviar msg
         handleMicClick={handleMicClick}
         listening={listening}
       />
