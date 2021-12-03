@@ -1,5 +1,5 @@
 // Package
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import style from './style.module.scss';
 
@@ -61,15 +61,6 @@ function ChatWindow({ person }) {
     };
 
     setInitialMsg([...initialMsg, msg]);
-
-    // setPayload((prevPayload) => ({
-    //   ...prevPayload,
-    //   id: person.id,
-    //   name: person.name,
-    //   avatar: person.avatar,
-    //   chat: initialMsg,
-    // }));
-    // fecthNewMsg(person.id);
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -83,25 +74,6 @@ function ChatWindow({ person }) {
   const handleCloseEmoji = () => {
     setEmojiOpem(false);
   };
-
-  const loadData = () => {
-    const response = api.get('/suport');
-    setSuportData(response.data);
-  };
-  
-  // useCallback(() => {
-  //   setPayload({
-  //     ...payload,
-  //     id: person.id,
-  //     name: person.name,
-  //     avatar: person.avatar,
-  //     chat: suportData?.find((e) => e.id === person.id)?.chat,
-  //   })
-  // }, [payload, person.avatar, person.id, person.name, suportData]);
-
-  useEffect(() => {
-    loadData();
-  }, []);
 
   return (
     <div className={style.chatWindow}>
