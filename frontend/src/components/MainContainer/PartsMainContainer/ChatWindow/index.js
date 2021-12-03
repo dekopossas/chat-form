@@ -16,11 +16,6 @@ function ChatWindow({ person }) {
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
   const [suportData, setSuportData] = useState([]);
-  const [payload, setPayload] = useState({
-    name: '',
-    avatar: '',
-    chat: [],
-  });
 
   let recognition = null;
   let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -80,7 +75,7 @@ function ChatWindow({ person }) {
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [person]);
 
   return (
     <div className={style.chatWindow}>
