@@ -16,10 +16,6 @@ function ChatWindow({ person }) {
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
   const [suportData, setSuportData] = useState([]);
-  const [msgSend, setMsgSend] = useState({
-    author: '',
-    body: '',
-  });
   const [payload, setPayload] = useState({
     name: '',
     avatar: '',
@@ -46,9 +42,8 @@ function ChatWindow({ person }) {
     }
   };
 
-  const fecthNewMsg = async (id) => {
-    const response = await api.put(`/suport/${id.id}`, payload);
-    console.log(response);
+  const fecthNewMsg = async (id, updateNewSuportChat) => {
+    await api.put(`/suport/${id}`, updateNewSuportChat);
   };
 
   const handleSendClick = () => {
@@ -56,8 +51,14 @@ function ChatWindow({ person }) {
       author: person.name,
       body: text,
     };
-
-    setSuportData([...suportData, msg]);
+    const payload = {
+      name: person.name,
+      avatar: person.avatar,
+      chat: [...suportData, msg],
+    };
+    fecthNewMsg(person.id, payload);
+    loadData();
+    setText('');
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -86,9 +87,6 @@ function ChatWindow({ person }) {
       <ChatHeader />
       <ChatBody listMsg={suportData} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
-      <button type="button" onClick={() => console.log(suportData)}>
-        butoba
-      </button>
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
