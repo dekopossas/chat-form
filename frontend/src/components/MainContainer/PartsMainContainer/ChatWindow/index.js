@@ -42,18 +42,20 @@ function ChatWindow({ person }) {
   };
 
   const handleSendClick = () => {
-    const msg = {
-      author: person.name,
-      body: text,
-    };
-    const payload = {
-      name: person.name,
-      avatar: person.avatar,
-      chat: [...suportData, msg],
-    };
-    fecthNewMsg(person.id, payload);
-    setText('');
-    loadData();
+    if (text !== '') {
+      const msg = {
+        author: person.name,
+        body: text,
+      };
+      const payload = {
+        name: person.name,
+        avatar: person.avatar,
+        chat: [...suportData, msg],
+      };
+      fecthNewMsg(person.id, payload);
+      setText('');
+      loadData();
+    }
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
