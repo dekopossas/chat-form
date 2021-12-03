@@ -52,8 +52,8 @@ function ChatWindow({ person }) {
       chat: [...suportData, msg],
     };
     fecthNewMsg(person.id, payload);
-    loadData();
     setText('');
+    loadData();
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -86,8 +86,8 @@ function ChatWindow({ person }) {
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
         emojiOpem={emojiOpem}
-        author
         setText={setText}
+        text={text}
         handleSendClick={handleSendClick}
         handleMicClick={handleMicClick}
         listening={listening}
