@@ -75,6 +75,67 @@ function ChatWindow({ person }) {
     setSuportData(response.data.chat);
   };
 
+  let msgBot = {
+    author: '',
+    body: '',
+  };
+
+  if (suportData.length === 2) {
+    msgBot = {
+      author: 'bot',
+      body: 'O que aconteceu que despertou esse Sentimento?',
+    };
+    const payload = {
+      name: person.name,
+      avatar: person.avatar,
+      chat: [...suportData, msgBot],
+    };
+    fecthNewMsg(person.id, payload);
+    loadData();
+  };
+
+  if (suportData.length === 4) {
+    msgBot = {
+      author: 'bot',
+      body: 'Como vc reagiu diante dessa situação?',
+    };
+    const payload = {
+      name: person.name,
+      avatar: person.avatar,
+      chat: [...suportData, msgBot],
+    };
+    fecthNewMsg(person.id, payload);
+    loadData();
+  };
+
+  if (suportData.length === 6) {
+    msgBot = {
+      author: 'bot',
+      body: 'Como poderia ter feito melhor?',
+    };
+    const payload = {
+      name: person.name,
+      avatar: person.avatar,
+      chat: [...suportData, msgBot],
+    };
+    fecthNewMsg(person.id, payload);
+    loadData();
+  };
+
+  if (suportData.length === 8) {
+    msgBot = {
+      author: 'bot',
+      body: 'Deixe suas Observações...',
+    };
+    const payload = {
+      name: person.name,
+      avatar: person.avatar,
+      chat: [...suportData, msgBot],
+    };
+    fecthNewMsg(person.id, payload);
+    loadData();
+  };
+
   useEffect(() => {
     loadData();
   }, [person]);
