@@ -1,5 +1,5 @@
 // Package
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import style from './style.module.scss';
 
@@ -61,6 +61,15 @@ function ChatWindow({ person }) {
     };
 
     setInitialMsg([...initialMsg, msg]);
+
+    // setPayload((prevPayload) => ({
+    //   ...prevPayload,
+    //   id: person.id,
+    //   name: person.name,
+    //   avatar: person.avatar,
+    //   chat: initialMsg,
+    // }));
+    // fecthNewMsg(person.id);
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -75,10 +84,30 @@ function ChatWindow({ person }) {
     setEmojiOpem(false);
   };
 
+  const loadData = async() => {
+    const response = await api.get(`/suport/${person.id}`);
+    setSuportData(response.data.chat);
+  };
+  console.log(suportData)
+  
+  // useCallback(() => {
+  //   setPayload({
+  //     ...payload,
+  //     id: person.id,
+  //     name: person.name,
+  //     avatar: person.avatar,
+  //     chat: suportData?.find((e) => e.id === person.id)?.chat,
+  //   })
+  // }, [payload, person.avatar, person.id, person.name, suportData]);
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
   return (
     <div className={style.chatWindow}>
       <ChatHeader />
-      <ChatBody listMsg={suportData?.find((e) => e.id === person.id)?.chat} />
+      <ChatBody listMsg={suportData} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
       {/* <button type="button" onClick={() => console.log(msgSend)}>
         butoba
