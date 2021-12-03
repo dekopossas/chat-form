@@ -13,11 +13,10 @@ import api from '../../../../services/api';
 
 function ChatWindow({ person }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
-  const [text, setText] = useState(''); // texto do input
+  const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
   const [suportData, setSuportData] = useState([]);
   const [msgSend, setMsgSend] = useState({
-    // seto um obj de msg
     author: '',
     body: '',
   });
@@ -26,9 +25,7 @@ function ChatWindow({ person }) {
     avatar: '',
     chat: [],
   });
-  const [initialMsg, setInitialMsg] = useState([]);
 
-  // reccing voice msg
   let recognition = null;
   let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (SpeechRecognition !== undefined) {
@@ -60,16 +57,7 @@ function ChatWindow({ person }) {
       body: text,
     };
 
-    setInitialMsg([...initialMsg, msg]);
-
-    // setPayload((prevPayload) => ({
-    //   ...prevPayload,
-    //   id: person.id,
-    //   name: person.name,
-    //   avatar: person.avatar,
-    //   chat: initialMsg,
-    // }));
-    // fecthNewMsg(person.id);
+    setSuportData([...suportData, msg]);
   };
 
   const handleEmojiClick = (_e, emojiObj) => {
@@ -84,21 +72,10 @@ function ChatWindow({ person }) {
     setEmojiOpem(false);
   };
 
-  const loadData = async() => {
+  const loadData = async () => {
     const response = await api.get(`/suport/${person.id}`);
     setSuportData(response.data.chat);
   };
-  console.log(suportData)
-  
-  // useCallback(() => {
-  //   setPayload({
-  //     ...payload,
-  //     id: person.id,
-  //     name: person.name,
-  //     avatar: person.avatar,
-  //     chat: suportData?.find((e) => e.id === person.id)?.chat,
-  //   })
-  // }, [payload, person.avatar, person.id, person.name, suportData]);
 
   useEffect(() => {
     loadData();
@@ -109,16 +86,16 @@ function ChatWindow({ person }) {
       <ChatHeader />
       <ChatBody listMsg={suportData} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
-      {/* <button type="button" onClick={() => console.log(msgSend)}>
+      <button type="button" onClick={() => console.log(suportData)}>
         butoba
-      </button> */}
+      </button>
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
         emojiOpem={emojiOpem}
         author
         setText={setText}
-        handleSendClick={handleSendClick} // função indo como prop de enviar msg
+        handleSendClick={handleSendClick}
         handleMicClick={handleMicClick}
         listening={listening}
       />
