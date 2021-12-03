@@ -25,9 +25,9 @@ Tabela de conteúdos
 - [x] Yup
 - [x] React
 - [x] Axios
-- [ ] Dynamic Chat Bot
-- [ ] Registered Service
-- [ ] REDUX
+- [x] Dynamic Chat Bot
+- [x] Registered Service
+- [x] REDUX
 - [x] Own components
 - [x] Routes
 
@@ -41,16 +41,28 @@ Tabela de conteúdos
 
 ### Not rated.
 
-- [ ] Header SideBar
-- [ ] Header
+- [x] SideBar
+- [x] Header
 - [ ] Footer
 - [ ] Face Book Login system
+- [x] Backup System.
+- [x] Routin Analiser
+- [ ] Color system.
 
 # ScreenShots
 
-<h4 align="left">
-  Screen`s Sections
-</h4>
+<h1 align="left">
+  <img alt="login page" title="#LoginPage" src="./assets/loginPage.png" />
+</h1>
+<h1 align="right">
+  <img alt="new user" title="#NewUser" src="./assets/newUserPage.png" />
+</h1>
+<h1 align="left">
+  <img alt="Main Page" title="#MainPage" src="./assets/mainPage.png" />
+</h1>
+<h1 align="right">
+  <img alt="Full Suport" title="#FullSuport" src="./assets/fullSuport.png" />
+</h1>
 
 ## Installation
 
