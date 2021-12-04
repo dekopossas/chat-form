@@ -9,7 +9,8 @@ Tabela de conteúdos
 <!--ts-->
    * [Features](#Features)
    * [ScreenShots](#ScreenShots)
-   * [Installation](#Instalação)	
+   * [Installation](#Instalação)
+   * [howToUse](#How-to-use)	
    * [Tecnologies](#tecnologias)
    * [Author](#Autor)
 <!--te-->
@@ -110,6 +111,16 @@ Wait until the browser opens on port 3000
 
 If you are using the npm package, the commands are different,
 I recommend following the [documentation](https://www.npmjs.com/)
+
+### HOW-TO-USE
+
+- On the login screen:
+	<p>1- Create and login to your account </p>
+
+- On the main screen:
+	<p>2- Start a new Suport</p>
+	<p>3- Answer the bot's questions until the end.</p>
+	<p>4- you can also browse through your recent calls.</p>
 
 ### 🛠 Technologies
 
