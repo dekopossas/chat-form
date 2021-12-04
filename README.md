@@ -114,13 +114,13 @@ I recommend following the [documentation](https://www.npmjs.com/)
 
 ### HOW-TO-USE
 
-	On the login screen:
-1- Create and login to your account 
+- On the login screen:
+	<p>1- Create and login to your account </p>
 
-	On the main screen:
-2- Start a new Suport
-3- Answer the bot's questions until the end.
-4- you can also browse through your recent calls.
+- On the main screen:
+	<p>2- Start a new Suport</p>
+	<p>3- Answer the bot's questions until the end.</p>
+	<p>4- you can also browse through your recent calls.</p>
 
 ### 🛠 Technologies
 
