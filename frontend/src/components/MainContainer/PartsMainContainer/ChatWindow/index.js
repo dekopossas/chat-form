@@ -38,7 +38,11 @@ function ChatWindow({ person }) {
   };
 
   const fecthNewMsg = async (id, updateNewSuportChat) => {
-    await api.put(`/suport/${id}`, updateNewSuportChat);
+    const response = await api.put(`/suport/${id}`, updateNewSuportChat);
+    if(response.status === 200) {
+      setText('');
+      loadData();
+    }
   };
 
   const handleSendClick = () => {
@@ -53,8 +57,6 @@ function ChatWindow({ person }) {
         chat: [...suportData, msg],
       };
       fecthNewMsg(person.id, payload);
-      setText('');
-      loadData();
     }
   };
 
@@ -91,7 +93,6 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgBot],
     };
     fecthNewMsg(person.id, payload);
-    loadData();
   };
 
   if (suportData.length === 4) {
@@ -105,7 +106,6 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgBot],
     };
     fecthNewMsg(person.id, payload);
-    loadData();
   };
 
   if (suportData.length === 6) {
@@ -119,7 +119,6 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgBot],
     };
     fecthNewMsg(person.id, payload);
-    loadData();
   };
 
   if (suportData.length === 8) {
@@ -133,7 +132,6 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgBot],
     };
     fecthNewMsg(person.id, payload);
-    loadData();
   };
 
   useEffect(() => {
