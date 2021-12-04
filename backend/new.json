@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "name": "lucas",
+      "id": "lucas@minatelli.com",
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar1.png"
+    },
+    {
+      "name": "deko",
+      "id": "andre@possas.com",
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar5.png"
+    }
+  ],
+  "suport": [
+    {
+      "id": "1",
+      "name": "Lucas Minatelli",
+      "avatar": "/image/avatares/avatar2.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Colé!"
+        },
+        {
+          "author": "lucas",
+          "body": "tudo bem?"
+        },
+        {
+          "author": "bot",
+          "body": "tudo!"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "André de Castro Possas",
+      "avatar": "/image/avatares/avatar3.png",
+      "chat": [
+        {
+          "author": "andre",
+          "body": "e ai parceiro!"
+        },
+        {
+          "author": "bot",
+          "body": "bom de mais??"
+        },
+        {
+          "author": "andre",
+          "body": "Graças a Deus!!"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Nicole Machado",
+      "avatar": "/image/avatares/avatar1.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Salve!"
+        },
+        {
+          "author": "Nicole",
+          "body": "tudo Certo?"
+        },
+        {
+          "author": "bot",
+          "body": "SIM sz sz!"
+        }
+      ]
+    },
+    {
+      "name": "deko",
+      "avatar": "/image/avatares/avatar5.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Olá deko, Como está se sentindo hoje?"
+        },
+        {
+          "author": "deko",
+          "body": "Estou ótimo!"
+        },
+        {
+          "author": "bot",
+          "body": "O que aconteceu que despertou esse Sentimento?"
+        },
+        {
+          "author": "deko",
+          "body": "tudo deu certo no trabalho, consegui terminar essa aplicação, estudei Inglês e li mais de 5 hoje. Foi absurdamente produtivo o dia."
+        },
+        {
+          "author": "bot",
+          "body": "Como vc reagiu diante dessa situação?"
+        },
+        {
+          "author": "deko",
+          "body": "Agi naturalmente, não sinto que poderia ter feito nada de melhor, esqueci de avisar que fui malhar tbm."
+        },
+        {
+          "author": "bot",
+          "body": "Como poderia ter feito melhor?"
+        },
+        {
+          "author": "deko",
+          "body": "Graças a Deus, como já disse, não vejo como poderia ter sido melhor!"
+        },
+        {
+          "author": "bot",
+          "body": "Deixe suas Observações..."
+        },
+        {
+          "author": "deko",
+          "body": "Final de dezembro preciso me organizar para pagar as consultas do Jack."
+        },
+        {
+          "author": "deko",
+          "body": "Final da sprint do Colômbia e inicio da Sprint do Fiscal."
+        },
+        {
+          "author": "deko",
+          "body": "Não posso esquecer meus compromissos para esse FDS e terminar de fazer meu acompanhamento financeiro."
+        },
+        {
+          "author": "deko",
+          "body": "😉😉😉"
+        }
+      ],
+      "id": "bmsz-Au"
+    }
+  ]
+}
