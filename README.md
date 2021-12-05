@@ -136,6 +136,7 @@ The following tools were used in the construction of the project:
 
 ### Vídeo
 
+<p><b>Important!</b> Mesage bug resolved and image create accont bug resolved too</p>
 https://www.youtube.com/watch?v=z7xRQ8aSsrA
 
 ### Autor
