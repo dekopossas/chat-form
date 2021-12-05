@@ -19,8 +19,12 @@ function Login() {
 
   const handleSubmitCreateAcc = async (values) => {
     // alert(JSON.stringify(values));
+    const newUser = {
+      ...values,
+      avatar: "/image/avatares/avatar4.png"
+    }
     try {
-      const response = await api.post('/users', values);
+      const response = await api.post('/users', newUser);
       if (response.status === 201) {
         alert('Conta criada com sucesso.');
       } else {
