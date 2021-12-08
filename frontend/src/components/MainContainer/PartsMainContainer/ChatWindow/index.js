@@ -45,7 +45,8 @@ function ChatWindow({ person }) {
     }
   };
 
-  const handleSendClick = () => {
+  const handleSendClick = (event) => {
+    event.preventDefault();
     if (text !== '') {
       const msg = {
         author: person.name,
