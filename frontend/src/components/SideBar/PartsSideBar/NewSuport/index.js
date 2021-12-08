@@ -19,8 +19,8 @@ function NewSuport({ show, setShow, handleNewChat }) {
         </div>
         <div className={style.newChatHeadTitle}>{t('New Suport')}</div>
       </div>
-      <div className={style.newChatList} onClick={handleNewChat}>
-        <div className={style.newChatItem}>
+      <div className={style.newChatList}>
+        <div className={style.newChatItem} onClick={handleNewChat}>
           <img className={style.newChatItemAvatar} src="/image/avatares/plus.png" alt="newchat" />
           <div className={style.newChatItemName}>
             {t('Do you want to start a new service?')}
