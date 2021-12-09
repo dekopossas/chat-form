@@ -45,22 +45,6 @@ function ChatWindow({ person }) {
     }
   };
 
-  const handleSendClick = (event) => {
-    event.preventDefault();
-    if (text !== '') {
-      const msg = {
-        author: person.name,
-        body: text,
-      };
-      const payload = {
-        name: person.name,
-        avatar: person.avatar,
-        chat: [...suportData, msg],
-      };
-      fecthNewMsg(person.id, payload);
-    }
-  };
-
   const handleEmojiClick = (_e, emojiObj) => {
     setText(text + emojiObj.emoji);
   };
@@ -78,59 +62,75 @@ function ChatWindow({ person }) {
     setSuportData(response.data.chat);
   };
 
-  let msgBot = {
+  let msgObj = {
     author: '',
     body: '',
   };
 
+  const handleSendClick = (event) => {
+    event.preventDefault();
+    if (text !== '') {
+      msgObj = {
+        author: person.name,
+        body: text,
+      };
+      const payload = {
+        name: person.name,
+        avatar: person.avatar,
+        chat: [...suportData, msgObj],
+      };
+      fecthNewMsg(person.id, payload);
+    }
+  };
+
   if (suportData.length === 2) {
-    msgBot = {
+    msgObj = {
       author: 'bot',
       body: 'O que aconteceu que despertou esse Sentimento?',
     };
     const payload = {
       name: person.name,
       avatar: person.avatar,
-      chat: [...suportData, msgBot],
+      chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
   };
 
   if (suportData.length === 4) {
-    msgBot = {
+    msgObj = {
       author: 'bot',
       body: 'Como vc reagiu diante dessa situação?',
     };
     const payload = {
       name: person.name,
       avatar: person.avatar,
-      chat: [...suportData, msgBot],
+      chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
   };
 
   if (suportData.length === 6) {
-    msgBot = {
+    msgObj = {
       author: 'bot',
       body: 'Como poderia ter feito melhor?',
     };
     const payload = {
       name: person.name,
       avatar: person.avatar,
-      chat: [...suportData, msgBot],
+      chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
   };
 
   if (suportData.length === 8) {
-    msgBot = {
+    msgObj = {
       author: 'bot',
       body: 'Deixe suas Observações...',
     };
     const payload = {
       name: person.name,
       avatar: person.avatar,
-      chat: [...suportData, msgBot],
+      chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
   };
