@@ -2,7 +2,7 @@ import React from 'react';
 import style from './style.module.scss';
 import './style.css';
 
-function MenssageItem({ data, player }) {
+function MenssageItem({ data }) {
   return (
     <div
       className={style.mensageLine}
