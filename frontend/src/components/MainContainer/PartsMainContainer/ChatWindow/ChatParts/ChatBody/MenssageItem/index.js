@@ -1,10 +1,11 @@
 import React from 'react';
 import style from './style.module.scss';
 import './style.css';
-import moment from 'moment';
 
 function MenssageItem({ data }) {
   const formateDate = (date) => {
+    const arr = [ ...date];
+    return arr.slice(11, 16);
   };
 
   return (
@@ -20,7 +21,6 @@ function MenssageItem({ data }) {
       >
         <div className={style.mensageText}>{data.body}</div>
         <div className={style.mensageDate}>{formateDate(data.time)}</div>
-        <button onClick={() => console.log(data.time)}>BUTOBA</button>
       </div>
     </div>
   );
