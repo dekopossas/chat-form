@@ -5,8 +5,6 @@ import moment from 'moment';
 
 function MenssageItem({ data }) {
   const formateDate = (date) => {
-    moment.locale('pt-br');
-    return moment(date).format('LT');
   };
 
   return (
@@ -22,6 +20,7 @@ function MenssageItem({ data }) {
       >
         <div className={style.mensageText}>{data.body}</div>
         <div className={style.mensageDate}>{formateDate(data.time)}</div>
+        <button onClick={() => console.log(data.time)}>BUTOBA</button>
       </div>
     </div>
   );

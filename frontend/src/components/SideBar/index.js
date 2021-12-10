@@ -1,6 +1,7 @@
 // Package
 import React, { useState } from 'react';
 import { Redirect } from 'react-router';
+import moment from 'moment';
 
 // Components
 import ChatListSideBar from './PartsSideBar/ChatListSideBar';
@@ -28,6 +29,11 @@ function SideBar() {
     fetchCreateNewChat();
   };
 
+  const formateDate = () => {
+    moment.locale('pt-br');
+    return moment().format();
+  };
+
   const player = JSON.parse(localStorage.getItem('player'));
   if (!player) return <Redirect to="/" />;
 
@@ -38,6 +44,7 @@ function SideBar() {
       {
         author: 'bot',
         body: `Olá ${player.name}, Como está se sentindo hoje?`,
+        time: formateDate()
       },
     ],
   };

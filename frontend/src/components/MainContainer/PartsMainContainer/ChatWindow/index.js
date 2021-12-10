@@ -156,7 +156,6 @@ function ChatWindow({ person }) {
       <ChatHeader />
       <ChatBody listMsg={suportData} />
       <EmojiArea emojiOpem={emojiOpem} handleEmojiClick={handleEmojiClick} />
-      <button onClick={() => console.log(formateDate())}>BUTOBA</button>
       <ChatFooter
         handleOpemEmoji={handleOpemEmoji}
         handleCloseEmoji={handleCloseEmoji}
