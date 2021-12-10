@@ -6,6 +6,7 @@ function ChatListItem({ onClick, active, data, avatar }) {
   const formateDate = (date) => {
     return `${date.slice(8, 10)}/${date.slice(5, 7)} ${date.slice(11, 16)}`;
   };
+  const lastMsg = data.chat[data.chat.length - 1].body;
 
   return (
     <div onClick={onClick} className={active ? style.chatListItemactive : style.chatListItem}>
@@ -17,8 +18,7 @@ function ChatListItem({ onClick, active, data, avatar }) {
         </div>
         <div className={style.chatList_line}>
           <div className={style.chatList_lastMsg}>
-            <p>Ultima msg provizoria</p>
-            {/* <p>{lastMsg}</p> */}
+            <p>{lastMsg}</p>
           </div>
         </div>
       </div>
