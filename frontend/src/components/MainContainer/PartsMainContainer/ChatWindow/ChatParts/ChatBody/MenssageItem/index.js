@@ -4,7 +4,7 @@ import './style.css';
 
 function MenssageItem({ data }) {
   const formateDate = (date) => {
-    const arr = [ ...date];
+    const arr = [...date];
     return arr.slice(11, 16);
   };
 
