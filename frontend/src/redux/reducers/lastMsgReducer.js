@@ -7,7 +7,7 @@ const lastMsgReducer = (state = INITIAL_STATE, action) => {
     case 'SET_LEST_MSG':
       return {
         ...state,
-        selectedPerson: action.person,
+        lastMsg: action.msg,
       };
     default:
       return state;
