@@ -10,9 +10,13 @@ import ChatBody from './ChatParts/ChatBody';
 import ChatFooter from './ChatParts/ChatFooter';
 import EmojiArea from './ChatParts/EmojiArea';
 
+// API
 import api from '../../../../services/api';
 
-function ChatWindow({ person }) {
+// redux
+import * as SetLastMsg from '../../../../redux/actions/lastMsgActions'
+
+function ChatWindow({ person, setLastMsg }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
   const [text, setText] = useState('');
   const [listening, setListening] = useState(false);
@@ -88,6 +92,7 @@ function ChatWindow({ person }) {
         chat: [...suportData, msgObj],
       };
       fecthNewMsg(person.id, payload);
+      setLastMsg(msgObj);
     }
   };
 
@@ -103,6 +108,7 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
+    setLastMsg(msgObj);
   }
 
   if (suportData.length === 4) {
@@ -117,6 +123,7 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
+    setLastMsg(msgObj);
   }
 
   if (suportData.length === 6) {
@@ -131,6 +138,7 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
+    setLastMsg(msgObj);
   }
 
   if (suportData.length === 8) {
@@ -145,6 +153,7 @@ function ChatWindow({ person }) {
       chat: [...suportData, msgObj],
     };
     fecthNewMsg(person.id, payload);
+    setLastMsg(msgObj);
   }
 
   useEffect(() => {
@@ -174,4 +183,8 @@ const mapStateToProps = (state) => ({
   person: state.chatReducer.selectedPerson,
 });
 
-export default connect(mapStateToProps)(ChatWindow);
+const mapDispatchToProp = (dispatch) => ({
+  setLastMsg: (msg) => dispatch(SetLastMsg.lastMsg(msg)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProp)(ChatWindow);
