@@ -1,5 +1,9 @@
 const INITIAL_STATE = {
-  lastMsg: {},
+  lastMsg: {
+    author: '',
+    body: '',
+    time: '',
+  },
 };
 
 const lastMsgReducer = (state = INITIAL_STATE, action) => {
@@ -7,7 +11,12 @@ const lastMsgReducer = (state = INITIAL_STATE, action) => {
     case 'SET_LEST_MSG':
       return {
         ...state,
-        lastMsg: action.msg,
+        lastMsg: {
+          ...state.lastMsg,
+          author: action.msg.author,
+          body: action.msg.body,
+          time: action.msg.time,
+        },
       };
     default:
       return state;
