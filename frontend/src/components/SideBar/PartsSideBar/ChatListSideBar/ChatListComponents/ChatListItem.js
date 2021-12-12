@@ -7,8 +7,8 @@ function ChatListItem({ onClick, active, data, avatar, lastMsgRedux }) {
   const formateDate = (date) => {
     return `${date.slice(8, 10)}/${date.slice(5, 7)} ${date.slice(11, 16)}`;
   };
-  // const lastMsg = data.chat[data.chat.length - 1].body;
-  const lastMsg = lastMsgRedux.body === '' ? data.chat[data.chat.length - 1].body : lastMsgRedux.body;
+  const lastMsg = data.chat[data.chat.length - 1].body;
+  // const lastMsg = lastMsgRedux.body === '' ? data.chat[data.chat.length - 1].body : lastMsgRedux.body;
 
   console.log(lastMsgRedux)
 
