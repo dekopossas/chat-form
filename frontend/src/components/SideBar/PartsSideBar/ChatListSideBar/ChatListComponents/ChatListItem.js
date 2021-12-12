@@ -2,12 +2,15 @@ import React from 'react';
 import style from './style.module.scss';
 import { connect } from 'react-redux';
 
-function ChatListItem({ onClick, active, data, avatar }) {
+function ChatListItem({ onClick, active, data, avatar, lastMsgRedux }) {
   const lastMsgData = data.chat[data.chat.length - 1].time;
   const formateDate = (date) => {
     return `${date.slice(8, 10)}/${date.slice(5, 7)} ${date.slice(11, 16)}`;
   };
-  const lastMsg = data.chat[data.chat.length - 1].body;
+  // const lastMsg = data.chat[data.chat.length - 1].body;
+  const lastMsg = lastMsgRedux.body === '' ? data.chat[data.chat.length - 1].body : lastMsgRedux.body;
+
+  console.log(lastMsgRedux)
 
   return (
     <div onClick={onClick} className={active ? style.chatListItemactive : style.chatListItem}>
@@ -28,7 +31,7 @@ function ChatListItem({ onClick, active, data, avatar }) {
 }
 
 const mapStateToProps = (state) => ({
-  lastMsg: state.lastMsgReducer.lastMsg,
+  lastMsgRedux: state.lastMsgReducer.lastMsg,
 });
 
 export default connect(mapStateToProps)(ChatListItem);
