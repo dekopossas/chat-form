@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
+import { connect } from 'react-redux';
 
 function ChatListItem({ onClick, active, data, avatar }) {
   const lastMsgData = data.chat[data.chat.length - 1].time;
@@ -26,4 +27,8 @@ function ChatListItem({ onClick, active, data, avatar }) {
   );
 }
 
-export default ChatListItem;
+const mapStateToProps = (state) => ({
+  lastMsg: state.lastMsgReducer.lastMsg,
+});
+
+export default connect(mapStateToProps)(ChatListItem);
