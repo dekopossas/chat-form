@@ -1,6 +1,5 @@
 // Package
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
 import style from './style.module.scss';
 import moment from 'moment';
 
@@ -15,6 +14,7 @@ import api from '../../../../services/api';
 
 // redux
 import * as SetLastMsg from '../../../../redux/actions/lastMsgActions'
+import { connect } from 'react-redux';
 
 function ChatWindow({ person, setLastMsg }) {
   const [emojiOpem, setEmojiOpem] = useState(false);
