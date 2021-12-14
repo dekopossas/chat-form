@@ -14,6 +14,8 @@ function ChatListSideBar(prop) {
     setData(response.data);
   };
 
+  console.log(data)
+
   useEffect(() => {
     loadData();
   }, []);
@@ -28,7 +30,7 @@ function ChatListSideBar(prop) {
               data={contact}
               avatar={contact.avatar}
               active={contact.id === prop.person.id}
-              lastMsg={contact.lastMsg}
+              lastMsgProp={contact.chat}
               onClick={() => prop.selectChat(contact)}
             />
           ))
