@@ -45,7 +45,6 @@ Tabela de conteúdos
 
 - [x] SideBar
 - [x] Header
-- [ ] Footer
 - [ ] Face Book Login system
 - [x] Backup System.
 - [x] Routin Analiser
