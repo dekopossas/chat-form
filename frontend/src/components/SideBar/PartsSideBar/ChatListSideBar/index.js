@@ -14,8 +14,6 @@ function ChatListSideBar(prop) {
     setData(response.data);
   };
 
-  console.log(data)
-
   useEffect(() => {
     loadData();
   }, []);
