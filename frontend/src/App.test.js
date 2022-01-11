@@ -25,19 +25,13 @@ describe('home test', () => {
 describe('main screen test', () => {
   it('new password', () => {
     render(<Suport />);
-    const linkElement = screen.getByText(/Forgot your password?/i);
+    const linkElement = screen.getByText(/Procurar ou começar uma nova conversa/i);
     expect(linkElement).toBeInTheDocument();
   });
 
   it('Suport section', () => {
     render(<Suport />);
-    const linkElement = screen.getByText(/I already have an account!/i);
-    expect(linkElement).toBeInTheDocument();
-  });
-
-  it('create section', () => {
-    render(<Suport />);
-    const linkElement = screen.getByText(/Sign in with:/i);
+    const linkElement = screen.getByText(/Digite uma Mensagem/i);
     expect(linkElement).toBeInTheDocument();
   });
 });
