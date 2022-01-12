@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Login from './App';
 import Suport from './pages/Suport';
+import { handleNewChat } from './components/SideBar/index'
 
 describe('home test', () => {
   it('new password', () => {
@@ -35,3 +36,10 @@ describe('main screen test', () => {
     expect(linkElement).toBeInTheDocument();
   });
 });
+
+describe('when i create a new suport', () => {
+  it('when i click on new suport', () => {
+
+
+  })
+})
