@@ -11,6 +11,12 @@
       "id": "andre@possas.com",
       "password": "321321321",
       "avatar": "/image/avatares/avatar5.png"
+    },
+    {
+      "name": "dekoDev",
+      "id": "deko@dev.com",
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar4.png"
     }
   ],
   "suport": [
@@ -154,6 +160,73 @@
         }
       ],
       "id": 3
+    },
+    {
+      "name": "dekoDev",
+      "avatar": "/image/avatares/avatar4.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Olá dekoDev, Como está se sentindo hoje?",
+          "time": "2022-02-12T14:40:25-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "alegre",
+          "time": "2022-02-12T14:44:35-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "O que aconteceu que despertou esse Sentimento?",
+          "time": "2022-02-12T14:44:35-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "fui malha, já li uns capítulos do fortaleza digital ",
+          "time": "2022-02-12T14:45:48-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Como vc reagiu diante dessa situação?",
+          "time": "2022-02-12T14:45:48-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "gravei um vídeo atualizado do meu projeto pessoal",
+          "time": "2022-02-12T14:46:51-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Como poderia ter feito melhor?",
+          "time": "2022-02-12T14:46:51-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "ando satisfeito com minhas decisões",
+          "time": "2022-02-12T14:47:49-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Deixe suas Observações...",
+          "time": "2022-02-12T14:47:49-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "Ontem foi aniversário do Ramon.",
+          "time": "2022-02-12T14:48:31-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "muito obrigado, vc é o bot mais gentil que eu conheço!",
+          "time": "2022-02-12T14:49:44-03:00"
+        },
+        {
+          "author": "dekoDev",
+          "body": "😂😂😎",
+          "time": "2022-02-12T14:50:44-03:00"
+        }
+      ],
+      "id": 4
     }
   ]
 }
