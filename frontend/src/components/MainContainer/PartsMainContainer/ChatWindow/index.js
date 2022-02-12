@@ -22,6 +22,7 @@ function ChatWindow({ person, setLastMsg }) {
   const [listening, setListening] = useState(false);
   const [suportData, setSuportData] = useState([]);
 
+  // voice system tutorial
   let recognition = null;
   let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (SpeechRecognition !== undefined) {
@@ -42,6 +43,7 @@ function ChatWindow({ person, setLastMsg }) {
     }
   };
 
+  // api conect
   const fecthNewMsg = async (id, updateNewSuportChat) => {
     const response = await api.put(`/suport/${id}`, updateNewSuportChat);
     if (response.status === 200) {
@@ -50,6 +52,12 @@ function ChatWindow({ person, setLastMsg }) {
     }
   };
 
+  const loadData = async () => {
+    const response = await api.get(`/suport/${person.id}`);
+    setSuportData(response.data.chat);
+  };
+
+  // Emotions tutorial
   const handleEmojiClick = (_e, emojiObj) => {
     setText(text + emojiObj.emoji);
   };
@@ -60,11 +68,6 @@ function ChatWindow({ person, setLastMsg }) {
 
   const handleCloseEmoji = () => {
     setEmojiOpem(false);
-  };
-
-  const loadData = async () => {
-    const response = await api.get(`/suport/${person.id}`);
-    setSuportData(response.data.chat);
   };
 
   const formateDate = () => {
