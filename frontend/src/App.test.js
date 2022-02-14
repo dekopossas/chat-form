@@ -36,10 +36,3 @@ describe('main screen test', () => {
     expect(linkElement).toBeInTheDocument();
   });
 });
-
-describe('when i create a new suport', () => {
-  it('when i click on new suport', () => {
-
-
-  })
-})
