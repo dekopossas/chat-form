@@ -17,6 +17,18 @@
       "id": "deko@dev.com",
       "password": "321321321",
       "avatar": "/image/avatares/avatar4.png"
+    },
+    {
+      "name": "Bruno Santos",
+      "id": "bruno@santos.com",
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar4.png"
+    },
+    {
+      "name": "rick",
+      "id": "rick@henrique.com",
+      "password": "321321321",
+      "avatar": "/image/avatares/avatar4.png"
     }
   ],
   "suport": [
@@ -227,6 +239,132 @@
         }
       ],
       "id": 4
+    },
+    {
+      "name": "Bruno Santos",
+      "avatar": "/image/avatares/avatar4.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Olá Bruno Santos, Como está se sentindo hoje?",
+          "time": "2022-02-14T19:16:22-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "Estou alegre.",
+          "time": "2022-02-14T19:19:42-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "O que aconteceu que despertou esse Sentimento?",
+          "time": "2022-02-14T19:19:42-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "hoje o dia foi ótimo.",
+          "time": "2022-02-14T19:20:39-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Como vc reagiu diante dessa situação?",
+          "time": "2022-02-14T19:20:39-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "Fui malha, estudei inglês, e espanhol pela manha, e já consegui ler alguns capítulos de fortaleza digital hoje",
+          "time": "2022-02-14T19:21:29-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Como poderia ter feito melhor?",
+          "time": "2022-02-14T19:21:29-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "Poderia ter me alimentado melhor.",
+          "time": "2022-02-14T19:22:20-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Deixe suas Observações...",
+          "time": "2022-02-14T19:22:20-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "hj foi o primeiro dia que trabalhei com TS",
+          "time": "2022-02-14T19:23:05-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "fds foi aniversario do ramon",
+          "time": "2022-02-14T19:23:32-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "😎😎😂",
+          "time": "2022-02-14T19:24:38-03:00"
+        },
+        {
+          "author": "Bruno Santos",
+          "body": "ultima mensagem",
+          "time": "2022-02-14T19:37:03-03:00"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Bruno Santos",
+      "avatar": "/image/avatares/avatar4.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Olá Bruno Santos, Como está se sentindo hoje?",
+          "time": "2022-02-14T19:43:45-03:00"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "rick",
+      "avatar": "/image/avatares/avatar4.png",
+      "chat": [
+        {
+          "author": "bot",
+          "body": "Olá rick, Como está se sentindo hoje?",
+          "time": "2022-02-21T20:11:32-03:00"
+        },
+        {
+          "author": "rick",
+          "body": "raiva",
+          "time": "2022-02-21T20:11:59-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "O que aconteceu que despertou esse Sentimento?",
+          "time": "2022-02-21T20:11:59-03:00"
+        },
+        {
+          "author": "rick",
+          "body": "conversei com o rick hoje e ele é muito chato",
+          "time": "2022-02-21T20:12:10-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Como vc reagiu diante dessa situação?",
+          "time": "2022-02-21T20:12:10-03:00"
+        },
+        {
+          "author": "rick",
+          "body": "você pode falar assim ó eu xinguei ele e fiquei muito",
+          "time": "2022-02-21T20:12:29-03:00"
+        },
+        {
+          "author": "bot",
+          "body": "Como poderia ter feito melhor?",
+          "time": "2022-02-21T20:12:29-03:00"
+        }
+      ],
+      "id": 7
     }
   ]
 }

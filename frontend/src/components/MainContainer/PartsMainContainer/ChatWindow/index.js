@@ -13,7 +13,7 @@ import EmojiArea from './ChatParts/EmojiArea';
 import api from '../../../../services/api';
 
 // redux
-import * as SetLastMsg from '../../../../redux/actions/lastMsgActions'
+import * as SetLastMsg from '../../../../redux/actions/lastMsgActions';
 import { connect } from 'react-redux';
 
 function ChatWindow({ person, setLastMsg }) {
@@ -80,6 +80,8 @@ function ChatWindow({ person, setLastMsg }) {
     body: '',
     time: '',
   };
+
+  // begin chat bot
 
   const handleSendClick = (event) => {
     event.preventDefault();
@@ -158,6 +160,8 @@ function ChatWindow({ person, setLastMsg }) {
     fecthNewMsg(person.id, payload);
     setLastMsg(msgObj);
   }
+
+  // end chat bot
 
   useEffect(() => {
     loadData();
