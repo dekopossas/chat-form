@@ -16,15 +16,15 @@ function HeaderSideBar({ setShow }) {
       <img className={style.header_avatar} src={player.avatar} alt="avatar" />
       <h4>{player.name}</h4>
       <div className={style.header_buttons}>
-        <div className={style.header_icons}>
+        {/* <div className={style.header_icons}>
           <i className="fas fa-sync-alt" style={{ color: '#919191' }}></i>
-        </div>
+        </div> */}
         <div className={style.header_icons} onClick={opemNewSuport}>
           <i className="fas fa-comments" style={{ color: '#919191' }}></i>
         </div>
-        <div className={style.header_icons}>
+        {/* <div className={style.header_icons}>
           <i className="fas fa-list-ul" style={{ color: '#919191' }}></i>
-        </div>
+        </div> */}
       </div>
     </div>
   );
