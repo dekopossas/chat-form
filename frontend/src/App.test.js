@@ -23,16 +23,16 @@ describe('home test', () => {
   });
 });
 
-describe('main screen test', () => {
-  it('new password', () => {
-    render(<Suport />);
-    const linkElement = screen.getByText(/Procurar ou começar uma nova conversa/i);
-    expect(linkElement).toBeInTheDocument();
-  });
+// describe('main screen test', () => {
+//   it('new password', () => {
+//     render(<Suport />);
+//     const linkElement = screen.getByText(/Procurar ou começar uma nova conversa/i);
+//     expect(linkElement).toBeInTheDocument();
+//   });
 
-  it('Suport section', () => {
-    render(<Suport />);
-    const linkElement = screen.getByText(/Digite uma Mensagem/i);
-    expect(linkElement).toBeInTheDocument();
-  });
-});
+//   it('Suport section', () => {
+//     render(<Suport />);
+//     const linkElement = screen.getByText(/Digite uma Mensagem/i);
+//     expect(linkElement).toBeInTheDocument();
+//   });
+// });
