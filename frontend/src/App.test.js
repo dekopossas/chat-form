@@ -18,7 +18,7 @@ describe('home test', () => {
 
   it('create section', () => {
     render(<Login />);
-    const linkElement = screen.getByText(/Sign in with:/i);
+    const linkElement = screen.getByText(/Forgot your password/i);
     expect(linkElement).toBeInTheDocument();
   });
 });
