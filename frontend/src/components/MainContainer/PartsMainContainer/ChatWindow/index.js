@@ -101,6 +101,8 @@ function ChatWindow({ person, setLastMsg }) {
     }
   };
 
+  // preciso mudar isso com urgencia
+
   if (suportData.length === 2) {
     msgObj = {
       author: 'bot',
